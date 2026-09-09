@@ -89,7 +89,7 @@ across resumes, default cap $10 (`--cap`). Cost never modifies N.
 ## Usage (after approval)
 
 ```bash
-cd /home/Drew/benchmark_v2
+cd ~/benchmark_v2
 python3 arms/selfcheck/run_selfcheck.py        # resumable
 python3 arms/selfcheck/validate_selfcheck.py   # certify; exit 0 iff VALID
 ```

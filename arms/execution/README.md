@@ -118,7 +118,7 @@ cost. Cost never modifies N.
 ## Usage (after approval, IN ORDER)
 
 ```bash
-cd /home/Drew/benchmark_v2
+cd ~/benchmark_v2
 python3 arms/execution/run_execution_signals.py        # Phase A (local)
 python3 arms/execution/validate_execution_signals.py   # integrity gate -> certification artifact
 python3 arms/execution/run_execution_evaluator.py      # Phase B (API; gated on certification)

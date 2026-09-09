@@ -30,7 +30,7 @@ RUN_LOG_PATH = DATA_DIR / "run_log.jsonl"
 #   - 164 lines, task_ids HumanEval/0 .. HumanEval/163, canonical order
 #   - official fields: task_id, prompt, entry_point, canonical_solution, test
 #   - every test field defines check(candidate)
-DATASET_PATH = Path("/home/Drew/human-eval-source-data/HumanEval.jsonl")
+DATASET_PATH = Path.home() / "human-eval-source-data" / "HumanEval.jsonl"
 DATASET_SHA256 = "1d49078ba3e2b196b9344535bef34a43021f038fad9561d6ee7c53450609a6a2"
 EXPECTED_N_TASKS = 164
 

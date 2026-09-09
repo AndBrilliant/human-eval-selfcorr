@@ -80,7 +80,7 @@ matches its frozen candidate hash.
 ## Usage
 
 ```bash
-cd /home/Drew/benchmark_v2
+cd ~/benchmark_v2
 python3 generate_baseline.py                 # full run (resumable)
 python3 generate_baseline.py --limit 3       # freeze at most 3 new candidates
 python3 validate_baseline.py                 # certify; exit 0 iff VALID

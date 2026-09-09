@@ -106,7 +106,7 @@ across resumes, default cap $10 (`--cap`). Cost never modifies N.
 ## Usage (after approval)
 
 ```bash
-cd /home/Drew/benchmark_v2
+cd ~/benchmark_v2
 python3 arms/steelman/run_steelman.py        # resumable
 python3 arms/steelman/validate_steelman.py   # certify; exit 0 iff VALID
 ```
