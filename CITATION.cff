@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: >-
+  If you use this research artifact, please cite it using the
+  metadata below.
+title: HumanEval Self-Correction Benchmark v2
+type: dataset
+authors:
+  - family-names: Brilliant
+    given-names: Andrew Michael
+repository-code: https://github.com/AndBrilliant/human-eval-selfcorr
+license: CC-BY-NC-SA-4.0
+date-released: '2026-09-09'
+version: d997a64f29d66bbfffbfdba8f5ef6a562f033878
+keywords:
+  - HumanEval
+  - large language models
+  - self-correction
+  - evaluator discrimination
+  - benchmark
+notes: >-
+  Fixed-candidate, paired benchmark of LLM correctness recognition
+  under pure self-check, structured steelman/self-debate, and
+  execution-grounded positive-control evaluation. N = 164 canonical
+  HumanEval tasks; one immutable candidate per task; no repair or
+  revision.

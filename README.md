@@ -11,9 +11,15 @@ recognize the correctness of **the same frozen object**: one immutable
 GPT-5.4 candidate solution per HumanEval task.
 
 - **N = 164** canonical HumanEval tasks.
-- **Stage 0:** exactly one candidate per task, generated once by
-  `gpt-5.4-2026-03-05` (temperature 0, `reasoning_effort="none"`) and
-  frozen immediately upon return — before any test execution.
+- **Stage 0 contains exactly one persisted frozen candidate per task.**
+  Each successfully returned candidate used by the experiment was frozen
+  immediately upon return, before reference-test scoring. One operational
+  exception is documented for **HumanEval/85**: a request was initiated
+  before a process interruption but no response was persisted; on resume
+  the still-unfrozen task's identical logical request was reissued. No
+  candidate content from the interrupted request was observed or used
+  for selection (see the operational note in
+  [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md)).
 - Stage-0 reference-test scoring (generation correctness **T0**):
   **155 correct candidates, 9 incorrect candidates** (N0 + N1 = 164).
 - **All three evaluator arms judge the SAME immutable candidate.** No
@@ -105,6 +111,16 @@ not a reproduction of the original realized sample.
 See [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) for the auditor-oriented
 guide and [`MANIFEST.sha256`](MANIFEST.sha256) for the definitive
 artifact hashes.
+
+## Independent audit
+
+An adversarial fresh-model (AI-assisted) audit of commit `d997a64`
+independently reconstructed the empirical results from the preserved
+corpus and found no major empirical failure (0 retraction-worthy,
+0 major findings), while identifying several manuscript claim-scope
+issues that belong to the paper, not this repository. Full provenance
+and scope caveats:
+[`reports/independent_adversarial_audit_20260909.md`](reports/independent_adversarial_audit_20260909.md).
 
 ## Layout
 
