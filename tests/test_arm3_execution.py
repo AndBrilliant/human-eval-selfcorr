@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Local regression tests for Arm 3 (execution-grounded positive control),
-including the executable integrity-gate (certification artifact) tests.
+including the executable integrity gate, strong cross-bound ledger
+validation, and production-completeness invariants.
 
 NO model/API calls anywhere: evaluation is driven by fake clients.
 Execution tests run small synthetic programs or real frozen candidates
@@ -13,6 +14,7 @@ from __future__ import annotations
 
 import contextlib
 import hashlib
+import inspect
 import io
 import json
 import os
@@ -121,8 +123,7 @@ def real_baseline():
 
 def fabricate_full_signals(paths, n=164, status_fn=None):
     """Write n signal records from the REAL frozen ledger, aligned with
-    the actual Stage 0 outcome by default (fixture construction only;
-    reads baseline through the same file the sanctioned certifier uses)."""
+    the actual Stage 0 outcome by default (fixture construction only)."""
     tasks = real_frozen()[:n]
     baseline = real_baseline()
     for t in tasks:
@@ -135,8 +136,7 @@ def fabricate_full_signals(paths, n=164, status_fn=None):
 
 
 def certify(paths):
-    """Run the REAL integrity validator against the tmp signal ledger,
-    producing (or not) the tmp certification artifact."""
+    """Run the REAL integrity validator against the tmp signal ledger."""
     argv = sys.argv
     sys.argv = ["validate_execution_signals.py", "--signals",
                 str(paths.signals), "--certification",
@@ -150,8 +150,9 @@ def certify(paths):
     return rc, out.getvalue()
 
 
-def fabricate_responses_decisions(paths, n=164, verdict_fn=None):
-    tasks = real_frozen()[:n]
+def fabricate_responses_decisions(paths, start=0, n=164, verdict_fn=None):
+    """Write consistent response+decision records for tasks[start:n]."""
+    tasks = real_frozen()[start:n]
     signals = {s["task_id"]: s for s in sig.load_jsonl(paths.signals)}
     for t in tasks:
         text = verdict_fn(t) if verdict_fn else "YES"
@@ -183,6 +184,28 @@ def run_final_validator(paths):
     finally:
         sys.argv = argv
     return rc, out.getvalue()
+
+
+def tamper_line(path, index, mutate):
+    lines = Path(path).read_text().splitlines()
+    rec = json.loads(lines[index])
+    rec = mutate(rec) or rec
+    lines[index] = json.dumps(rec)
+    Path(path).write_text("\n".join(lines) + "\n")
+
+
+class Arm3Fixture(unittest.TestCase):
+    """Base: full certified 164-signal ledger in a tmp dir."""
+
+    def setUp(self):
+        self.tmpdir = tempfile.mkdtemp(prefix="arm3_fx_")
+        self.addCleanup(shutil.rmtree, self.tmpdir, True)
+        self.paths = ev_paths(self.tmpdir)
+        self.tasks = real_frozen()
+        fabricate_full_signals(sig.Paths(self.paths.signals,
+                                         self.paths.failures, self.paths.log))
+        rc, out = certify(self.paths)
+        assert rc == 0, f"fixture certification failed: {out}"
 
 
 # ── Source integrity ──────────────────────────────────────────────────
@@ -347,7 +370,7 @@ class TestPhaseAFreezeResume(unittest.TestCase):
                 self.assertNotIn(forbidden, rec)
 
 
-# ── Signal-ledger hardening (Issue 2) ─────────────────────────────────
+# ── Signal-ledger hardening ───────────────────────────────────────────
 
 class TestSignalLedgerHardening(unittest.TestCase):
 
@@ -382,8 +405,6 @@ class TestSignalLedgerHardening(unittest.TestCase):
         bogus["task_id"] = "HumanEval/999"
         records.append(bogus)
         self.write(records)
-        # 164 records, but one is unexpected: ledger validation must
-        # reject it outright (length can never mask the wrong ID set).
         with self.assertRaises(SystemExit):
             sig.validate_signal_ledger(self.path, self.frozen_by_id)
 
@@ -398,7 +419,7 @@ class TestSignalLedgerHardening(unittest.TestCase):
         rec = self.good(self.tasks[0], status="pass")
         rec["execution_test_status"] = "timeout"
         rec["execution_status"] = "fail"
-        rec["execution_treatment_text"] = acfg.TREATMENT_FAIL  # wrong text
+        rec["execution_treatment_text"] = acfg.TREATMENT_FAIL
         self.write([rec])
         with self.assertRaises(SystemExit):
             sig.validate_signal_ledger(self.path, self.frozen_by_id)
@@ -406,7 +427,7 @@ class TestSignalLedgerHardening(unittest.TestCase):
     def test_pass_status_with_fail_execution_status_rejected(self):
         rec = self.good(self.tasks[0], status="pass")
         rec["execution_test_status"] = "pass"
-        rec["execution_status"] = "fail"  # inconsistent
+        rec["execution_status"] = "fail"
         rec["execution_treatment_text"] = acfg.TREATMENT_FAIL
         self.write([rec])
         with self.assertRaises(SystemExit):
@@ -422,34 +443,15 @@ class TestSignalLedgerHardening(unittest.TestCase):
             sig.validate_signal_ledger(self.path, self.frozen_by_id)
 
 
-# ── Phase B: evaluator + executable integrity gate ────────────────────
+# ── Phase B: gate + evaluator ─────────────────────────────────────────
 
-class TestPhaseB(unittest.TestCase):
-
-    def setUp(self):
-        self.tmpdir = tempfile.mkdtemp(prefix="arm3_pb_")
-        self.addCleanup(shutil.rmtree, self.tmpdir, True)
-        self.paths = ev_paths(self.tmpdir)
-        self.tasks = real_frozen()[:3]
-        # Full 164-signal ledger + REAL certification via the validator.
-        fabricate_full_signals(sig.Paths(self.paths.signals,
-                                         self.paths.failures, self.paths.log))
-        rc, out = certify(self.paths)
-        assert rc == 0, f"fixture certification failed: {out}"
-
-    def test_valid_certification_allows_evaluation(self):
-        client, comp = text_client("YES")
-        rc = ev.run_evaluator(self.paths, client, self.tasks, 10.0,
-                              silent_log)
-        self.assertEqual(rc, 0)
-        self.assertEqual(comp.calls, 3)
+class TestPhaseB(Arm3Fixture):
 
     def test_missing_certification_aborts_zero_calls(self):
         self.paths.certification.unlink()
         client, comp = text_client("YES")
         with self.assertRaises(SystemExit):
-            ev.run_evaluator(self.paths, client, self.tasks, 10.0,
-                             silent_log)
+            ev.run_evaluator(self.paths, client, 10.0, silent_log)
         self.assertEqual(comp.calls, 0)
 
     def test_invalid_certification_aborts_zero_calls(self):
@@ -458,19 +460,25 @@ class TestPhaseB(unittest.TestCase):
         self.paths.certification.write_text(json.dumps(cert))
         client, comp = text_client("YES")
         with self.assertRaises(SystemExit):
-            ev.run_evaluator(self.paths, client, self.tasks, 10.0,
-                             silent_log)
+            ev.run_evaluator(self.paths, client, 10.0, silent_log)
         self.assertEqual(comp.calls, 0)
 
     def test_stale_certification_aborts_zero_calls(self):
-        # Cert is valid but certifies a DIFFERENT signal ledger.
         cert = json.loads(self.paths.certification.read_text())
         cert["execution_signals_sha256"] = "0" * 64
         self.paths.certification.write_text(json.dumps(cert))
         client, comp = text_client("YES")
         with self.assertRaises(SystemExit):
-            ev.run_evaluator(self.paths, client, self.tasks, 10.0,
-                             silent_log)
+            ev.run_evaluator(self.paths, client, 10.0, silent_log)
+        self.assertEqual(comp.calls, 0)
+
+    def test_missing_certified_at_aborts(self):
+        cert = json.loads(self.paths.certification.read_text())
+        cert["certified_at"] = ""
+        self.paths.certification.write_text(json.dumps(cert))
+        client, comp = text_client("YES")
+        with self.assertRaises(SystemExit):
+            ev.run_evaluator(self.paths, client, 10.0, silent_log)
         self.assertEqual(comp.calls, 0)
 
     def test_main_does_not_construct_client_without_certification(self):
@@ -496,15 +504,15 @@ class TestPhaseB(unittest.TestCase):
         self.paths.signals.write_text("\n".join(lines[:2]) + "\n")
         client, comp = text_client("YES")
         with self.assertRaises(SystemExit):
-            ev.run_evaluator(self.paths, client, self.tasks, 10.0,
-                             silent_log)
+            ev.run_evaluator(self.paths, client, 10.0, silent_log)
         self.assertEqual(comp.calls, 0)
 
     def test_exact_request_and_treatment(self):
+        fabricate_responses_decisions(self.paths, start=1)  # task 0 pending
         client, comp = text_client("YES")
-        rc = ev.run_evaluator(self.paths, client, self.tasks, 10.0,
-                              silent_log)
+        rc = ev.run_evaluator(self.paths, client, 10.0, silent_log)
         self.assertEqual(rc, 0)
+        self.assertEqual(comp.calls, 1)
         kw = comp.kwargs_seen[0]
         self.assertEqual(kw["model"], "gpt-5.4-2026-03-05")
         self.assertEqual(kw["temperature"], 0)
@@ -535,18 +543,13 @@ class TestPhaseB(unittest.TestCase):
 
     def test_invalid_verdict_freezes_halts_no_resample(self):
         client, comp = text_client("MAYBE")
-        rc = ev.run_evaluator(self.paths, client, self.tasks, 10.0,
-                              silent_log)
+        rc = ev.run_evaluator(self.paths, client, 10.0, silent_log)
         self.assertEqual(rc, 3)
         self.assertEqual(comp.calls, 1)
-        responses = ev.validate_response_ledger(self.paths.responses)
-        tid = self.tasks[0]["task_id"]
-        self.assertEqual(responses[tid]["raw_evaluator_response"], "MAYBE")
-        decisions = ev.load_decisions(self.paths.decisions)
-        self.assertEqual(decisions[tid]["parse_status"], "invalid_verdict")
-        self.assertIsNone(decisions[tid]["verdict"])
-        rc2 = ev.run_evaluator(self.paths, client, self.tasks, 10.0,
-                               silent_log)
+        decisions = sig.load_jsonl(self.paths.decisions)
+        self.assertEqual(decisions[0]["parse_status"], "invalid_verdict")
+        self.assertIsNone(decisions[0]["verdict"])
+        rc2 = ev.run_evaluator(self.paths, client, 10.0, silent_log)
         self.assertEqual(rc2, 3)
         self.assertEqual(comp.calls, 1, "invalid verdict was resampled!")
 
@@ -566,33 +569,35 @@ class TestPhaseB(unittest.TestCase):
         self.assertEqual(comp.calls, 1)
 
     def test_freeze_before_parse_survives_crash(self):
+        fabricate_responses_decisions(self.paths, start=1)  # task 0 pending
         client, comp = text_client("YES")
-        real_parse = ev.parse_verdict
+        real_build = ev.build_decision_record
 
-        def crash_parse(raw):
-            raise RuntimeError("simulated parse crash")
+        def crash_build(task, response_rec):
+            raise RuntimeError("simulated parse/store crash")
 
-        ev.parse_verdict = crash_parse
+        ev.build_decision_record = crash_build
         try:
             with self.assertRaises(RuntimeError):
-                ev.run_evaluator(self.paths, client, self.tasks, 10.0,
-                                 silent_log)
+                ev.run_evaluator(self.paths, client, 10.0, silent_log)
         finally:
-            ev.parse_verdict = real_parse
+            ev.build_decision_record = real_build
         self.assertEqual(comp.calls, 1)
-        responses = ev.validate_response_ledger(self.paths.responses)
-        tid = self.tasks[0]["task_id"]
-        h1 = responses[tid]["raw_evaluator_response_sha256"]
-        rc = ev.run_evaluator(self.paths, client, self.tasks, 10.0,
-                              silent_log)
+        responses = sig.load_jsonl(self.paths.responses)
+        h1 = [r for r in responses
+              if r["task_id"] == "HumanEval/0"][0]["raw_evaluator_response_sha256"]
+        rc = ev.run_evaluator(self.paths, client, 10.0, silent_log)
         self.assertEqual(rc, 0)
-        self.assertEqual(comp.calls, 3)
-        responses2 = ev.validate_response_ledger(self.paths.responses)
-        self.assertEqual(responses2[tid]["raw_evaluator_response_sha256"], h1)
+        self.assertEqual(comp.calls, 1, "frozen response was resampled!")
+        responses2 = sig.load_jsonl(self.paths.responses)
+        h2 = [r for r in responses2
+              if r["task_id"] == "HumanEval/0"][0]["raw_evaluator_response_sha256"]
+        self.assertEqual(h1, h2)
 
     def test_transport_retry_then_success(self):
         import httpx
         import openai
+        fabricate_responses_decisions(self.paths, start=1)  # task 0 pending
         state = {"n": 0}
 
         def flaky(kwargs):
@@ -606,18 +611,168 @@ class TestPhaseB(unittest.TestCase):
         saved = root_config.GEN_BACKOFF_BASE_S
         root_config.GEN_BACKOFF_BASE_S = 0.0
         try:
-            rc = ev.run_evaluator(self.paths, client, self.tasks[:1], 10.0,
-                                  silent_log)
+            rc = ev.run_evaluator(self.paths, client, 10.0, silent_log)
         finally:
             root_config.GEN_BACKOFF_BASE_S = saved
         self.assertEqual(rc, 0)
         self.assertEqual(comp.calls, 2)
-        responses = ev.validate_response_ledger(self.paths.responses)
-        self.assertEqual(responses[self.tasks[0]["task_id"]]
-                         ["transport_attempts"], 2)
+        responses = sig.load_jsonl(self.paths.responses)
+        r0 = [r for r in responses if r["task_id"] == "HumanEval/0"][0]
+        self.assertEqual(r0["transport_attempts"], 2)
 
 
-# ── Certification artifact (Issue 1) ──────────────────────────────────
+# ── Strong response-ledger binding (Issue 1) ──────────────────────────
+
+class TestResponseBinding(Arm3Fixture):
+
+    def setUp(self):
+        super().setUp()
+        # 163 valid frozen responses/decisions; task HumanEval/1 would
+        # otherwise require exactly ONE new evaluator call.
+        fabricate_responses_decisions(self.paths, start=1)
+
+    def assert_aborts_zero_calls(self):
+        client, comp = text_client("YES")
+        with self.assertRaises(SystemExit):
+            ev.run_evaluator(self.paths, client, 10.0, silent_log)
+        self.assertEqual(comp.calls, 0)
+
+    def test_wrong_candidate_sha_aborts(self):
+        tamper_line(self.paths.responses, 0,
+                    lambda r: r.update(candidate_sha256="0" * 64))
+        self.assert_aborts_zero_calls()
+
+    def test_wrong_task_index_aborts(self):
+        tamper_line(self.paths.responses, 0,
+                    lambda r: r.update(task_index=999))
+        self.assert_aborts_zero_calls()
+
+    def test_wrong_execution_status_aborts(self):
+        def flip(r):
+            r["execution_status"] = ("fail" if r["execution_status"] == "pass"
+                                     else "pass")
+        tamper_line(self.paths.responses, 0, flip)
+        self.assert_aborts_zero_calls()
+
+    def test_wrong_treatment_aborts(self):
+        tamper_line(self.paths.responses, 0,
+                    lambda r: r.update(
+                        execution_treatment_text=acfg.TREATMENT_FAIL_TIMEOUT
+                        if r["execution_treatment_text"] != acfg.TREATMENT_FAIL_TIMEOUT
+                        else acfg.TREATMENT_PASS))
+        self.assert_aborts_zero_calls()
+
+    def test_wrong_evaluator_prompt_aborts(self):
+        tamper_line(self.paths.responses, 0,
+                    lambda r: r.update(evaluator_prompt="unrelated text"))
+        self.assert_aborts_zero_calls()
+
+    def test_unexpected_task_id_aborts(self):
+        lines = self.paths.responses.read_text().splitlines()
+        rec = json.loads(lines[0])
+        rec["task_id"] = "HumanEval/999"
+        lines.append(json.dumps(rec))
+        self.paths.responses.write_text("\n".join(lines) + "\n")
+        self.assert_aborts_zero_calls()
+
+    def test_wrong_response_model_aborts(self):
+        tamper_line(self.paths.responses, 0,
+                    lambda r: r.update(response_model="some-other-model"))
+        self.assert_aborts_zero_calls()
+
+
+# ── Strong decision-ledger binding (Issue 1B) ─────────────────────────
+
+class TestDecisionBinding(Arm3Fixture):
+
+    def setUp(self):
+        super().setUp()
+        fabricate_responses_decisions(self.paths, start=1)
+
+    def test_decision_without_matching_response_aborts(self):
+        # remove the first response record but keep its decision
+        lines = self.paths.responses.read_text().splitlines()
+        self.paths.responses.write_text("\n".join(lines[1:]) + "\n")
+        with self.assertRaises(SystemExit):
+            ev.run_evaluator(self.paths, text_client("YES")[0], 10.0,
+                             silent_log)
+
+    def test_decision_wrong_candidate_sha_aborts(self):
+        tamper_line(self.paths.decisions, 0,
+                    lambda r: r.update(candidate_sha256="0" * 64))
+        with self.assertRaises(SystemExit):
+            ev.run_evaluator(self.paths, text_client("YES")[0], 10.0,
+                             silent_log)
+
+    def test_decision_wrong_raw_sha_aborts(self):
+        tamper_line(self.paths.decisions, 0,
+                    lambda r: r.update(raw_evaluator_response_sha256="f" * 64))
+        with self.assertRaises(SystemExit):
+            ev.run_evaluator(self.paths, text_client("YES")[0], 10.0,
+                             silent_log)
+
+    def test_decision_parser_mismatch_aborts(self):
+        tamper_line(self.paths.decisions, 0,
+                    lambda r: r.update(acceptance=0))  # raw says YES
+        with self.assertRaises(SystemExit):
+            ev.run_evaluator(self.paths, text_client("YES")[0], 10.0,
+                             silent_log)
+
+    def test_correctly_stored_invalid_verdict_is_legitimate(self):
+        # Add task 0's response raw "MAYBE" + correctly parsed decision.
+        t = self.tasks[0]
+        signals = {s["task_id"]: s
+                   for s in sig.load_jsonl(self.paths.signals)}
+        res = ev.EvalResult(
+            text="MAYBE", response_id="fake-0",
+            response_model=acfg.EVALUATOR_MODEL, finish_reason="stop",
+            prompt_tokens=600, completion_tokens=1, duration_s=0.1,
+            transport_attempts=1, system_fingerprint=FAKE_FINGERPRINT,
+            response_created=FAKE_CREATED, service_tier="default",
+            request_id="req_fake")
+        prompt = ev.build_evaluator_prompt(
+            t["prompt"], t["candidate_code"],
+            signals[t["task_id"]]["execution_treatment_text"])
+        rr = ev.build_response_record(t, signals[t["task_id"]], res, prompt)
+        ev.append_jsonl(self.paths.responses, rr)
+        ev.append_jsonl(self.paths.decisions,
+                        ev.build_decision_record(t, rr))
+        client, comp = text_client("YES")
+        rc = ev.run_evaluator(self.paths, client, 10.0, silent_log)
+        self.assertEqual(rc, 3)          # established invalid-verdict halt
+        self.assertEqual(comp.calls, 0)  # zero NEW API calls, no resampling
+
+
+# ── Production completeness (Issue 2) ─────────────────────────────────
+
+class TestProductionCompleteness(Arm3Fixture):
+
+    def test_no_subset_parameter_exists(self):
+        params = inspect.signature(ev.run_evaluator).parameters
+        self.assertNotIn("frozen_records", params)
+        self.assertNotIn("tasks", params)
+        self.assertNotIn("limit", params)
+
+    def test_full_certified_state_completes_with_zero_calls(self):
+        fabricate_responses_decisions(self.paths)  # all 164
+        client, comp = text_client("YES")
+        rc = ev.run_evaluator(self.paths, client, 10.0, silent_log)
+        self.assertEqual(rc, 0)
+        self.assertEqual(comp.calls, 0)
+        self.assertEqual(len(sig.load_jsonl(self.paths.responses)), 164)
+        self.assertEqual(len(sig.load_jsonl(self.paths.decisions)), 164)
+
+    def test_163_prepopulated_one_pending_completes_with_one_call(self):
+        fabricate_responses_decisions(self.paths, start=1)
+        client, comp = text_client("NO")
+        rc = ev.run_evaluator(self.paths, client, 10.0, silent_log)
+        self.assertEqual(rc, 0)
+        self.assertEqual(comp.calls, 1)
+        self.assertEqual(len(sig.load_jsonl(self.paths.responses)), 164)
+        self.assertEqual(len(sig.load_jsonl(self.paths.decisions)), 164)
+
+
+# ── Certification artifact ────────────────────────────────────────────
 
 class TestCertificationArtifact(unittest.TestCase):
 
@@ -639,6 +794,8 @@ class TestCertificationArtifact(unittest.TestCase):
         self.assertEqual(cert["execution_pass"], 155)
         self.assertEqual(cert["execution_fail"], 9)
         self.assertEqual(cert["execution_t0_mismatches"], 0)
+        self.assertIsInstance(cert["certified_at"], str)
+        self.assertTrue(cert["certified_at"].strip())
         self.assertEqual(cert["source_frozen_ledger_sha256"],
                          acfg.APPROVED_FROZEN_SHA256)
         self.assertEqual(cert["baseline_ledger_sha256"],
@@ -667,8 +824,7 @@ class TestCertificationArtifact(unittest.TestCase):
         rc, out = certify(self.paths)
         self.assertEqual(rc, 1)
         self.assertIn("Execution/T0 mismatches: 1", out)
-        self.assertFalse(self.paths.certification.is_file(),
-                         "failed validation left a usable certification!")
+        self.assertFalse(self.paths.certification.is_file())
 
     def test_failed_validation_removes_preexisting_certification(self):
         fabricate_full_signals(sig.Paths(self.paths.signals,
@@ -676,7 +832,6 @@ class TestCertificationArtifact(unittest.TestCase):
         rc, out = certify(self.paths)
         self.assertEqual(rc, 0)
         self.assertTrue(self.paths.certification.is_file())
-        # now corrupt one signal's T0 alignment and re-validate
         lines = self.paths.signals.read_text().splitlines()
         rec = json.loads(lines[0])
         if rec["execution_status"] == "pass":
@@ -691,8 +846,7 @@ class TestCertificationArtifact(unittest.TestCase):
         self.paths.signals.write_text("\n".join(lines) + "\n")
         rc, out = certify(self.paths)
         self.assertEqual(rc, 1)
-        self.assertFalse(self.paths.certification.is_file(),
-                         "failed validation did not remove the certification!")
+        self.assertFalse(self.paths.certification.is_file())
 
 
 # ── Blindness ─────────────────────────────────────────────────────────
@@ -700,9 +854,6 @@ class TestCertificationArtifact(unittest.TestCase):
 class TestBlindness(unittest.TestCase):
 
     def test_no_arm3_runtime_reads_forbidden_ledgers(self):
-        """Phase A + Phase B runtime must not operationally read
-        baseline.jsonl or Arm 1/2 ledgers. (The two certifier modules are
-        the sanctioned exception for baseline.jsonl only.)"""
         runtime = [Path(acfg.ARM_DIR) / "run_execution_signals.py",
                    Path(acfg.ARM_DIR) / "run_execution_evaluator.py"]
         for py in runtime:
@@ -720,37 +871,11 @@ class TestBlindness(unittest.TestCase):
                 self.assertNotIn(forbidden, text, f"{py}: {forbidden}")
 
 
-# ── Validators ────────────────────────────────────────────────────────
+# ── Final certifier (canonical strong validation) ─────────────────────
 
-class TestValidators(unittest.TestCase):
-
-    def setUp(self):
-        self.tmpdir = tempfile.mkdtemp(prefix="arm3_val_")
-        self.addCleanup(shutil.rmtree, self.tmpdir, True)
-        self.paths = ev_paths(self.tmpdir)
-
-    def test_signal_integrity_validator_passes_aligned(self):
-        fabricate_full_signals(sig.Paths(self.paths.signals,
-                                         self.paths.failures, self.paths.log))
-        rc, out = certify(self.paths)
-        self.assertEqual(rc, 0)
-        self.assertIn("Execution/T0 mismatches: 0", out)
-        self.assertIn("Execution PASS: 155", out)
-        self.assertIn("Execution FAIL: 9", out)
-        self.assertIn("EXECUTION-SIGNAL INTEGRITY: YES", out)
-
-    def test_signal_validator_rejects_incomplete(self):
-        fabricate_full_signals(sig.Paths(self.paths.signals,
-                                         self.paths.failures, self.paths.log),
-                               n=163)
-        rc, out = certify(self.paths)
-        self.assertEqual(rc, 1)
-        self.assertIn("Missing execution signals: 1", out)
-        self.assertFalse(self.paths.certification.is_file())
+class TestFinalValidator(Arm3Fixture):
 
     def test_full_validator_passes(self):
-        fabricate_full_signals(sig.Paths(self.paths.signals,
-                                         self.paths.failures, self.paths.log))
         fabricate_responses_decisions(
             self.paths,
             verdict_fn=lambda t: "YES" if t["task_index"] % 4 else "NO")
@@ -763,28 +888,37 @@ class TestValidators(unittest.TestCase):
         self.assertIn("YES + NO: 164", out)
         self.assertIn("VALID ARM 3 EXECUTION POSITIVE CONTROL: YES", out)
 
-    def test_full_validator_rejects_tampered_response(self):
-        fabricate_full_signals(sig.Paths(self.paths.signals,
-                                         self.paths.failures, self.paths.log))
+    def test_rejects_tampered_raw_response(self):
         fabricate_responses_decisions(self.paths)
-        lines = self.paths.responses.read_text().splitlines()
-        rec = json.loads(lines[0])
-        rec["raw_evaluator_response"] = "NO"
-        lines[0] = json.dumps(rec)
-        self.paths.responses.write_text("\n".join(lines) + "\n")
+        tamper_line(self.paths.responses, 0,
+                    lambda r: r.update(raw_evaluator_response="NO"))
         rc, out = run_final_validator(self.paths)
         self.assertEqual(rc, 1)
         self.assertIn("VALID ARM 3 EXECUTION POSITIVE CONTROL: NO", out)
 
-    def test_full_validator_rejects_wrong_treatment_in_response(self):
-        fabricate_full_signals(sig.Paths(self.paths.signals,
-                                         self.paths.failures, self.paths.log))
+    def test_rejects_wrong_treatment_in_response(self):
         fabricate_responses_decisions(self.paths)
-        lines = self.paths.responses.read_text().splitlines()
-        rec = json.loads(lines[0])
-        rec["execution_treatment_text"] = acfg.TREATMENT_FAIL
-        lines[0] = json.dumps(rec)
-        self.paths.responses.write_text("\n".join(lines) + "\n")
+        tamper_line(self.paths.responses, 0,
+                    lambda r: r.update(
+                        execution_treatment_text=acfg.TREATMENT_FAIL_TIMEOUT
+                        if r["execution_treatment_text"] != acfg.TREATMENT_FAIL_TIMEOUT
+                        else acfg.TREATMENT_PASS))
+        rc, out = run_final_validator(self.paths)
+        self.assertEqual(rc, 1)
+
+    def test_rejects_timeout_signal_with_generic_treatment(self):
+        fabricate_responses_decisions(self.paths)
+        tamper_line(self.paths.signals, 0, lambda r: r.update(
+            execution_test_status="timeout",
+            execution_status="fail",
+            execution_treatment_text=acfg.TREATMENT_FAIL))
+        rc, out = run_final_validator(self.paths)
+        self.assertEqual(rc, 1)
+
+    def test_rejects_wrong_signal_task_index(self):
+        fabricate_responses_decisions(self.paths)
+        tamper_line(self.paths.signals, 0,
+                    lambda r: r.update(task_index=999))
         rc, out = run_final_validator(self.paths)
         self.assertEqual(rc, 1)
 

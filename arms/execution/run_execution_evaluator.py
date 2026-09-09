@@ -171,6 +171,13 @@ def verify_phase_b_preflight(paths: Paths) -> List[dict]:
             f"CURRENT signal ledger {current_sha}. The certification is "
             f"stale or the ledger changed. Re-run "
             f"validate_execution_signals.py.")
+    # 12. certified_at exists and is a non-empty string (audit metadata,
+    # not interpreted cryptographically).
+    if not isinstance(cert.get("certified_at"), str) or \
+            not cert["certified_at"].strip():
+        raise SystemExit(
+            f"ARM 3 PHASE B ABORT: certification certified_at missing or "
+            f"empty.")
     return frozen_records
 
 
@@ -374,7 +381,16 @@ def build_decision_record(task: dict, response_rec: dict) -> dict:
     }
 
 
-def validate_response_ledger(path: Path) -> Dict[str, dict]:
+def validate_response_ledger(path: Path, frozen_by_id: Dict[str, dict],
+                             signals: Dict[str, dict]) -> Dict[str, dict]:
+    """STRONG validation of the frozen evaluator-response ledger.
+
+    Every frozen response is cross-bound to the approved task, the
+    immutable frozen candidate, the certified execution signal, the exact
+    execution treatment, and the exact current evaluator prompt. A
+    stale/corrupt response for a legitimate task_id is an ABORT, never a
+    silent reuse and never an automatic resample.
+    """
     responses: Dict[str, dict] = {}
     for rec in load_jsonl(path):
         tid = rec.get("task_id")
@@ -387,21 +403,86 @@ def validate_response_ledger(path: Path) -> Dict[str, dict]:
             raise SystemExit(
                 f"CORRUPT ARM 3 RESPONSE LEDGER: duplicate task_id {tid} in "
                 f"{path}.")
+        # 1. task_id must exist in the approved frozen corpus.
+        if tid not in frozen_by_id:
+            raise SystemExit(
+                f"CORRUPT ARM 3 RESPONSE LEDGER: unexpected task_id {tid} in "
+                f"{path} (not in the approved frozen corpus).")
+        # 2. task_id must exist in the certified signal ledger.
+        if tid not in signals:
+            raise SystemExit(
+                f"CORRUPT ARM 3 RESPONSE LEDGER: {tid} has no certified "
+                f"execution signal.")
+        fr = frozen_by_id[tid]
+        sig = signals[tid]
+        # 4. task_index exactly equals the frozen record.
+        if rec["task_index"] != fr["task_index"]:
+            raise SystemExit(
+                f"CORRUPT ARM 3 RESPONSE LEDGER: {tid} task_index "
+                f"{rec['task_index']} != frozen {fr['task_index']}.")
+        # 5. candidate_sha256 exactly equals the frozen record.
+        if rec["candidate_sha256"] != fr["candidate_sha256"]:
+            raise SystemExit(
+                f"CORRUPT ARM 3 RESPONSE LEDGER: {tid} candidate_sha256 "
+                f"does not match the approved frozen candidate.")
+        # 6. execution_status exactly equals the certified signal.
+        if rec["execution_status"] != sig["execution_status"]:
+            raise SystemExit(
+                f"CORRUPT ARM 3 RESPONSE LEDGER: {tid} execution_status "
+                f"{rec['execution_status']!r} != certified signal "
+                f"{sig['execution_status']!r}.")
+        # 7. execution treatment exactly equals the certified signal.
+        if rec["execution_treatment_text"] != sig["execution_treatment_text"]:
+            raise SystemExit(
+                f"CORRUPT ARM 3 RESPONSE LEDGER: {tid} treatment text does "
+                f"not match the certified signal.")
+        # 8. evaluator_prompt is exactly the current template output.
+        expected_prompt = build_evaluator_prompt(
+            fr["prompt"], fr["candidate_code"],
+            sig["execution_treatment_text"])
+        if rec["evaluator_prompt"] != expected_prompt:
+            raise SystemExit(
+                f"CORRUPT ARM 3 RESPONSE LEDGER: {tid} evaluator_prompt is "
+                f"not the exact current template instantiation.")
+        # 9. raw-response hash recomputes.
         if sha256_text(rec["raw_evaluator_response"]) != \
                 rec["raw_evaluator_response_sha256"]:
             raise SystemExit(
                 f"IMMUTABILITY VIOLATION: raw_evaluator_response_sha256 does "
                 f"not match raw_evaluator_response for {tid} in {path}.")
+        # 10. all response protocol constants match.
         for field, expected in RESPONSE_PROTOCOL_FIELDS.items():
             if rec[field] != expected:
                 raise SystemExit(
                     f"PROTOCOL MISMATCH: {tid} has {field}={rec[field]!r}, "
                     f"Arm 3 protocol requires {expected!r}. Refusing to run.")
+        # 11. response_model equals the pinned requested snapshot.
+        if rec["response_model"] != acfg.EVALUATOR_MODEL:
+            raise SystemExit(
+                f"CORRUPT ARM 3 RESPONSE LEDGER: {tid} response_model "
+                f"{rec['response_model']!r} != pinned snapshot "
+                f"{acfg.EVALUATOR_MODEL!r}.")
         responses[tid] = rec
     return responses
 
 
-def load_decisions(path: Path) -> Dict[str, dict]:
+DECISION_PROTOCOL_FIELDS = {
+    "schema_version": acfg.SCHEMA_VERSION,
+    "experiment_version": acfg.EXPERIMENT_VERSION,
+    "arm": acfg.ARM_NAME,
+}
+
+
+def validate_decision_ledger(path: Path, frozen_by_id: Dict[str, dict],
+                             responses: Dict[str, dict]) -> Dict[str, dict]:
+    """STRONG validation of the parsed decision ledger.
+
+    A correctly stored invalid_verdict IS legitimate frozen experimental
+    data: it validates if it accurately reflects the frozen raw response
+    (the parser rerun agrees). A decision without a matching frozen
+    response, an unexpected task_id, or any cross-binding mismatch is
+    corruption and aborts.
+    """
     decisions: Dict[str, dict] = {}
     for rec in load_jsonl(path):
         tid = rec.get("task_id")
@@ -409,22 +490,68 @@ def load_decisions(path: Path) -> Dict[str, dict]:
             raise SystemExit(
                 f"CORRUPT ARM 3 DECISION LEDGER: duplicate task_id {tid} in "
                 f"{path}.")
+        if tid not in frozen_by_id:
+            raise SystemExit(
+                f"CORRUPT ARM 3 DECISION LEDGER: unexpected task_id {tid} in "
+                f"{path}.")
+        rr = responses.get(tid)
+        if rr is None:
+            raise SystemExit(
+                f"CORRUPT ARM 3 DECISION LEDGER: decision for {tid} has no "
+                f"matching frozen evaluator response.")
+        fr = frozen_by_id[tid]
+        if rec.get("task_index") != fr["task_index"]:
+            raise SystemExit(
+                f"CORRUPT ARM 3 DECISION LEDGER: {tid} task_index "
+                f"{rec.get('task_index')} != frozen {fr['task_index']}.")
+        if rec.get("candidate_sha256") != fr["candidate_sha256"]:
+            raise SystemExit(
+                f"CORRUPT ARM 3 DECISION LEDGER: {tid} candidate_sha256 "
+                f"does not match the approved frozen candidate.")
+        if rec.get("execution_status") != rr["execution_status"]:
+            raise SystemExit(
+                f"CORRUPT ARM 3 DECISION LEDGER: {tid} execution_status "
+                f"{rec.get('execution_status')!r} != matching response "
+                f"{rr['execution_status']!r}.")
+        if rec.get("raw_evaluator_response_sha256") != \
+                rr["raw_evaluator_response_sha256"]:
+            raise SystemExit(
+                f"CORRUPT ARM 3 DECISION LEDGER: {tid} raw-response hash "
+                f"does not match the frozen response.")
+        for field, expected in DECISION_PROTOCOL_FIELDS.items():
+            if rec.get(field) != expected:
+                raise SystemExit(
+                    f"PROTOCOL MISMATCH: decision {tid} has {field}="
+                    f"{rec.get(field)!r}, required {expected!r}.")
+        # Rerun the strict parser on the FROZEN raw response; the stored
+        # fields must match exactly (including a legitimate invalid_verdict).
+        v, a, ps = parse_verdict(rr["raw_evaluator_response"])
+        if (rec.get("verdict"), rec.get("acceptance"),
+                rec.get("parse_status")) != (v, a, ps):
+            raise SystemExit(
+                f"CORRUPT ARM 3 DECISION LEDGER: {tid} stored decision "
+                f"({rec.get('verdict')}, {rec.get('acceptance')}, "
+                f"{rec.get('parse_status')}) != parser output ({v}, {a}, "
+                f"{ps}).")
         decisions[tid] = rec
     return decisions
 
 
 # ── Phase B driver ────────────────────────────────────────────────────
 
-def run_evaluator(paths: Paths, client, frozen_records: List[dict],
-                  cap_usd: float, log: Callable) -> int:
+def run_evaluator(paths: Paths, client, cap_usd: float,
+                  log: Callable) -> int:
     """Full Arm 3 Phase B pass. Return codes:
         0 = arm complete (164 responses + 164 valid decisions)
         1 = incomplete (infrastructure; resume later)
         3 = invalid verdict (halted loudly, nothing resampled)
 
-    The executable integrity gate (verify_phase_b_preflight) runs FIRST;
-    there is no route to client.chat.completions.create without a valid
-    certification for the CURRENT signal ledger.
+    There is deliberately NO caller-supplied task list: the corpus is
+    always the full approved 164-task frozen ledger obtained from
+    verify_phase_b_preflight(). "Complete" can only ever mean all 164
+    approved tasks. The executable integrity gate and the strong
+    response/decision ledger validators run BEFORE any model request, so
+    no corrupt/stale artifact can cause a new API call.
     """
     # MANDATORY GATE — aborts unless the current 164-signal ledger is
     # covered by a valid matching certification artifact.
@@ -433,28 +560,28 @@ def run_evaluator(paths: Paths, client, frozen_records: List[dict],
     # Signal validation is always against the FULL approved corpus.
     frozen_by_id = {t["task_id"]: t for t in full_frozen}
     signals = validate_signal_ledger(paths.signals, frozen_by_id)
-    # Every task submitted for evaluation must be covered by a signal.
-    missing_signals = [t["task_id"] for t in frozen_records
-                       if t["task_id"] not in signals]
-    if missing_signals:
-        raise SystemExit(
-            f"ARM 3 PHASE B ABORT: no execution signal for "
-            f"{missing_signals[:5]}. Complete Phase A first.")
 
-    responses = validate_response_ledger(paths.responses)
-    decisions = load_decisions(paths.decisions)
+    # STRONG ledger validation BEFORE any new API request: existing
+    # frozen responses and decisions are cross-bound to the frozen
+    # candidate, certified signal, exact treatment, and exact prompt.
+    responses = validate_response_ledger(paths.responses, frozen_by_id,
+                                         signals)
+    decisions = validate_decision_ledger(paths.decisions, frozen_by_id,
+                                         responses)
     spent = sum(r.get("estimated_cost_usd", 0.0) for r in responses.values())
 
+    # A correctly stored invalid verdict is legitimate frozen data; it
+    # halts the arm again on resume with ZERO new API calls.
     for tid, dec in decisions.items():
         if dec.get("parse_status") != "valid":
             log("arm3_halt_invalid_verdict", task_id=tid, resumed=True)
             return 3
 
-    log("arm3_run_start", total=len(frozen_records),
+    log("arm3_run_start", total=len(full_frozen),
         responses=len(responses), decisions=len(decisions),
         carried_over_spend_usd=round(spent, 4), cost_cap_usd=cap_usd)
 
-    for task in frozen_records:
+    for task in full_frozen:
         tid = task["task_id"]
         if tid in decisions:
             continue
@@ -521,12 +648,12 @@ def run_evaluator(paths: Paths, client, frozen_records: List[dict],
             log("arm3_halt_invalid_verdict", task_id=tid)
             return 3
 
-    expected_ids = {t["task_id"] for t in frozen_records}
+    expected_ids = {t["task_id"] for t in full_frozen}
     complete = (set(responses) == expected_ids and set(decisions) == expected_ids
                 and all(d.get("parse_status") == "valid"
                         for d in decisions.values()))
     log("arm3_run_end", responses=len(responses), decisions=len(decisions),
-        expected=len(frozen_records), spent_usd=round(spent, 4),
+        expected=len(full_frozen), spent_usd=round(spent, 4),
         complete=complete)
     if not complete:
         print("\nINCOMPLETE ARM 3: re-run to resume. Frozen evaluator "
@@ -556,17 +683,22 @@ def main(argv=None, client_factory=None) -> int:
     paths = Paths(signals=args.signals, responses=args.responses,
                   decisions=args.decisions, failures=args.failures,
                   log=args.log, certification=args.certification)
-    # MANDATORY GATE: preflight BEFORE any client factory invocation.
-    # If the gate fails, zero API calls are possible — no client is ever
-    # constructed.
-    verify_phase_b_preflight(paths)
-    frozen_records = load_frozen_records()
+    # MANDATORY GATE + strong ledger validation BEFORE any client factory
+    # invocation. If anything fails, zero API calls are possible — no
+    # client is ever constructed, and no corrupt/stale frozen artifact
+    # can trigger a new request.
+    full_frozen = verify_phase_b_preflight(paths)
+    frozen_by_id = {t["task_id"]: t for t in full_frozen}
+    signals = validate_signal_ledger(paths.signals, frozen_by_id)
+    responses = validate_response_ledger(paths.responses, frozen_by_id,
+                                         signals)
+    validate_decision_ledger(paths.decisions, frozen_by_id, responses)
 
     log = RunLogger(paths.log)
     factory = client_factory or make_client
     client = factory()
     try:
-        return run_evaluator(paths, client, frozen_records, args.cap, log)
+        return run_evaluator(paths, client, args.cap, log)
     except FatalConfigError as exc:
         log("fatal_protocol_error", error=str(exc)[:500])
         print(f"\nFATAL: {exc}", file=sys.stderr)

@@ -8,14 +8,20 @@ execution corpus (all 164 signal generations) has NOT been produced.
 
 Created (all new; no prior artifact modified):
 - `arms/execution/__init__.py`
-- `arms/execution/config.py` — protocol constants, exact treatment texts, exact prompt template, approved hashes
+- `arms/execution/config.py` — protocol constants, exact treatment texts, exact prompt template, approved hashes, certification-artifact path
 - `arms/execution/run_execution_signals.py` — Phase A: local execution + signal freezing (no API)
-- `arms/execution/validate_execution_signals.py` — integrity gate (sole sanctioned reader of `baseline.jsonl`)
-- `arms/execution/run_execution_evaluator.py` — Phase B: evaluator calls
-- `arms/execution/validate_execution.py` — final certifier
+- `arms/execution/validate_execution_signals.py` — integrity gate; writes the hash-bound certification artifact (one of two sanctioned `baseline.jsonl` readers)
+- `arms/execution/run_execution_evaluator.py` — Phase B: evaluator calls (gated; strong cross-bound ledger validators)
+- `arms/execution/validate_execution.py` — final certifier (second sanctioned `baseline.jsonl` reader; reuses canonical strong validators)
 - `arms/execution/README.md` — protocol document (contains all four required statements verbatim)
-- `tests/test_arm3_execution.py` — 25 local regression tests
+- `tests/test_arm3_execution.py` — 54 local regression tests
 - `reports/arm3_execution_build_report.md` — this file
+
+Note: a `benchmark_v2/.gitignore` appeared in one intermediate archive as
+part of unrelated repo initialization; it was never part of the approved
+experimental tree and has been REMOVED. The `benchmark_v2/.git` directory
+exists locally (the project is now the recreated GitHub repo
+AndBrilliant/human-eval-selfcorr) and is EXCLUDED from the zip archive.
 
 Changed: none. Stage 0, Arm 1, Arm 2 code/data/reports untouched.
 
@@ -99,41 +105,84 @@ timeout = 300.0
 
 ## Two-phase architecture (PATCHED after independent build review)
 
-**Review issues found and fixed:**
+**Review issues found and fixed (round 1):**
 
 - **ISSUE 1 (BLOCKER):** Phase B verified only that 164 execution signals
   existed; the T0 integrity gate was documentary, not executable.
-  **Fix:** `validate_execution_signals.py` now writes a signed-statement
+  **Fix:** `validate_execution_signals.py` now writes a hash-bound
   certification artifact
   (`data/arm3_execution_signal_certification.json`, atomic
   temp+fsync+rename) ONLY after successful certification of the complete
   164-task signal ledger, recording the SHA-256 of the exact certified
   ledger bytes. Any failed validation REMOVES the artifact.
   `verify_phase_b_preflight()` in `run_execution_evaluator.py` enforces
-  11 checks before any client construction or model request (approved
+  the gate before any client construction or model request (approved
   Stage 0 hash; exactly 164 frozen tasks; exact signal-ID set equality;
   full signal consistency; artifact presence; exact certification
   metadata — status "valid", 0 mismatches, 164/164, PASS 155 / FAIL 9;
-  approved source/baseline hashes; and `execution_signals_sha256` equal
-  to the CURRENT ledger SHA). The gate runs in BOTH `main()` (before the
-  client factory) and `run_evaluator()` (before any model request):
-  Phase B is now technically incapable of proceeding without a valid
-  certification matching the current ledger, and there is no
-  programmatic bypass to `client.chat.completions.create(...)`. The
-  runtime reads only the certification artifact — it still never reads
-  `baseline.jsonl`.
+  approved source/baseline hashes; `execution_signals_sha256` equal to
+  the CURRENT ledger SHA; non-empty `certified_at`). The gate runs in
+  BOTH `main()` (before the client factory) and `run_evaluator()`
+  (before any model request): Phase B is technically incapable of
+  proceeding without a valid certification matching the current ledger,
+  and there is no programmatic bypass to
+  `client.chat.completions.create(...)`. The runtime reads only the
+  certification artifact — it still never reads `baseline.jsonl`.
 - **ISSUE 2:** signal-ledger completeness was length-based and unexpected
-  task IDs were accepted (163 expected + 1 unexpected could count as
-  164). **Fix:** `validate_signal_ledger()` now rejects any task_id not
-  in the approved frozen corpus, duplicates, task_index disagreement,
-  and candidate-SHA disagreement; Phase A/Phase B completeness is exact
-  set equality. The ledger is additionally self-validating for
-  status/treatment consistency via the allowed mapping table
-  (pass→pass+TREATMENT_PASS; timeout→fail+TREATMENT_FAIL_TIMEOUT;
-  fail_assertion/fail_error→fail+TREATMENT_FAIL; all else rejected).
+  task IDs were accepted. **Fix:** `validate_signal_ledger()` rejects
+  unexpected task IDs, duplicates, `task_index` disagreement, and
+  candidate-SHA disagreement; completeness is exact set equality. The
+  ledger is self-validating for status/treatment consistency via the
+  allowed mapping table.
 - **Wording:** `baseline.jsonl` may be read ONLY inside the TWO
   dedicated certifier modules (`validate_execution_signals.py` and
   `validate_execution.py`). The evaluator runtime never reads it.
+
+**Review issues found and fixed (round 2):**
+
+- **ISSUE 1 (BLOCKER):** frozen evaluator responses were insufficiently
+  bound to the certified experimental object — a stale/corrupt response
+  for a legitimate task_id (altered candidate_sha256, task_index, or
+  evaluator_prompt with internally valid hashes/protocol constants) was
+  accepted and reused. **Fix:** `validate_response_ledger(path,
+  frozen_by_id, signals)` now cross-binds every frozen response to the
+  approved task, task_index, frozen candidate, certified signal,
+  execution_status, exact treatment, exact current evaluator prompt,
+  raw-response hash, protocol constants, AND the pinned response_model.
+  Any violation: ABORT before any new API request; never resampled.
+- **ISSUE 1B:** the decision ledger was weakly validated. **Fix:**
+  `validate_decision_ledger(path, frozen_by_id, responses)` enforces
+  expected IDs, matching frozen response, task_index/candidate/
+  execution_status/raw-hash equality, exact protocol constants, and
+  requires the strict parser rerun on the frozen raw response to
+  reproduce the stored verdict/acceptance/parse_status exactly. A
+  correctly stored invalid_verdict is legitimate frozen data (parser
+  agrees) and still halts the arm with rc 3 and zero new API calls; a
+  decision without a matching response is corruption and aborts.
+- **ISSUE 2 (BLOCKER):** production `run_evaluator()` accepted a
+  caller-supplied task list and could declare a 3-task subset "Arm 3
+  complete". **Fix:** the `frozen_records` parameter is REMOVED;
+  `run_evaluator(paths, client, cap_usd, log)` always obtains the full
+  approved 164-task corpus from `verify_phase_b_preflight()` and
+  "complete" can only ever mean all 164 approved tasks. Tests exercise
+  partial work by prepopulating valid ledgers and leaving 1-3 tasks
+  pending — no production subset bypass exists.
+- **Startup ordering** is now: approved frozen ledger → complete
+  certified signal ledger → matching hash-bound certification → strong
+  response validation → strong decision validation → ONLY THEN new
+  evaluator requests. `main()` performs all of it before client
+  construction.
+- **Final certifier** (`validate_execution.py`) now REUSES the canonical
+  strong validators (no divergent second definition of a valid record):
+  wrong task_index, unknown execution_test_status,
+  timeout-with-generic-treatment, pass-with-fail-status, candidate
+  mismatch, signal/response mismatch, response/prompt mismatch, and
+  response/decision mismatch are all rejected by the same code that
+  gates the runtime.
+- **Wording:** the certification artifact is "hash-bound"
+  (SHA-256-bound); no cryptographic signing is implied.
+  `.gitignore` (present in one intermediate archive, never part of the
+  approved tree) has been REMOVED.
 
 Architecture (post-patch):
 
@@ -173,18 +222,20 @@ never from T0. T0 lookup exists solely in the two certifier modules, runs
 after signal freezing, and gates Phase B. The evaluator request path has
 no access to `baseline_correct`.
 
-## Local test results (post-patch)
+## Local test results (post-patch, round 2)
 
-- Arm 3 suite: 39/39 pass (`python3 tests/test_arm3_execution.py`),
-  including the 14 new gate/hardening tests: missing/invalid/stale
-  certification → Phase B aborts with zero API calls; valid matching
-  certification → evaluation allowed; `main()` never constructs the
-  client without certification; validator writes the artifact on success
-  and removes it on failure; artifact carries the exact signal-ledger
-  SHA-256; one-task T0 mismatch → failure + no usable certification;
-  unexpected signal ID rejected; 163+1-unexpected never complete; wrong
-  task_index rejected; timeout-with-generic-treatment rejected;
-  pass-status-with-fail-status rejected; unknown test status rejected.
+- Arm 3 suite: 54/54 pass (`python3 tests/test_arm3_execution.py`),
+  including all 17 round-2 required tests: response binding (wrong
+  candidate SHA / task_index / execution_status / treatment /
+  evaluator_prompt / unexpected ID / wrong response_model → abort, zero
+  new API calls); decision binding (no matching response, wrong
+  candidate SHA, wrong raw SHA, parser mismatch → abort; correctly
+  stored invalid_verdict → legitimate, rc 3 halt, zero new calls);
+  production completeness (no subset parameter exists; full 164
+  certified state completes with zero calls; 163-prepopulated + 1
+  pending completes with exactly one call); final-certifier strength
+  (timeout signal with generic treatment rejected; wrong signal
+  task_index rejected).
 - Regression: Stage 0 29/29, Arm 1 19/19, Arm 2 24/24 — all unchanged.
 - Compilation checks pass.
 

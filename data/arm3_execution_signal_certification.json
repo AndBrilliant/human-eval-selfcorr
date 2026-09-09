@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "experiment_version": "arm3-execution-v1",
+  "arm": "execution_grounded",
+  "source_frozen_ledger_sha256": "a08167e369c3b3ec353f7f0bd84f843e7add0cb80f2ad4eb498fca6dc6c53aa3",
+  "baseline_ledger_sha256": "bf52d7622141788c51b0c5a5870b225c28424f5f5cf834e0f5086ba13a827a04",
+  "execution_signals_sha256": "97e82cc88faabc2ddf43da1f72e25cd5e18a38ed5127c6a6b9e7b44e6c654369",
+  "expected_tasks": 164,
+  "frozen_execution_signals": 164,
+  "execution_pass": 155,
+  "execution_fail": 9,
+  "execution_t0_mismatches": 0,
+  "certification_status": "valid",
+  "certified_at": "2026-09-09T05:33:22+00:00"
+}

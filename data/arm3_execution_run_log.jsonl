@@ -1,0 +1,660 @@
+{"ts": "2026-09-09T05:31:31+00:00", "event": "arm3_signals_start", "total": 164, "signals": 0, "todo": 164}
+{"ts": "2026-09-09T05:31:31+00:00", "event": "signal_frozen", "task_id": "HumanEval/0", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:31+00:00", "event": "signal_frozen", "task_id": "HumanEval/1", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:31+00:00", "event": "signal_frozen", "task_id": "HumanEval/2", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:31+00:00", "event": "signal_frozen", "task_id": "HumanEval/3", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:31+00:00", "event": "signal_frozen", "task_id": "HumanEval/4", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:31+00:00", "event": "signal_frozen", "task_id": "HumanEval/5", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:31+00:00", "event": "signal_frozen", "task_id": "HumanEval/6", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:31+00:00", "event": "signal_frozen", "task_id": "HumanEval/7", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:31+00:00", "event": "signal_frozen", "task_id": "HumanEval/8", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:31+00:00", "event": "signal_frozen", "task_id": "HumanEval/9", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:31+00:00", "event": "signal_frozen", "task_id": "HumanEval/10", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:31+00:00", "event": "signal_frozen", "task_id": "HumanEval/11", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:31+00:00", "event": "signal_frozen", "task_id": "HumanEval/12", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:31+00:00", "event": "signal_frozen", "task_id": "HumanEval/13", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:31+00:00", "event": "signal_frozen", "task_id": "HumanEval/14", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:31+00:00", "event": "signal_frozen", "task_id": "HumanEval/15", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:31+00:00", "event": "signal_frozen", "task_id": "HumanEval/16", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:31+00:00", "event": "signal_frozen", "task_id": "HumanEval/17", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:31+00:00", "event": "signal_frozen", "task_id": "HumanEval/18", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:31+00:00", "event": "signal_frozen", "task_id": "HumanEval/19", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:31+00:00", "event": "signal_frozen", "task_id": "HumanEval/20", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:31+00:00", "event": "signal_frozen", "task_id": "HumanEval/21", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:31+00:00", "event": "signal_frozen", "task_id": "HumanEval/22", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:31+00:00", "event": "signal_frozen", "task_id": "HumanEval/23", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:31+00:00", "event": "signal_frozen", "task_id": "HumanEval/24", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/25", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/26", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/27", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/28", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/29", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/30", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/31", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/32", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/33", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/34", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/35", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/36", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/37", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/38", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/39", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/40", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/41", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/42", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/43", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/44", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/45", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/46", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/47", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/48", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/49", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/50", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/51", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/52", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/53", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:32+00:00", "event": "signal_frozen", "task_id": "HumanEval/54", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:33+00:00", "event": "signal_frozen", "task_id": "HumanEval/55", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:33+00:00", "event": "signal_frozen", "task_id": "HumanEval/56", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:33+00:00", "event": "signal_frozen", "task_id": "HumanEval/57", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:33+00:00", "event": "signal_frozen", "task_id": "HumanEval/58", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:33+00:00", "event": "signal_frozen", "task_id": "HumanEval/59", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:33+00:00", "event": "signal_frozen", "task_id": "HumanEval/60", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:33+00:00", "event": "signal_frozen", "task_id": "HumanEval/61", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:33+00:00", "event": "signal_frozen", "task_id": "HumanEval/62", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:33+00:00", "event": "signal_frozen", "task_id": "HumanEval/63", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:33+00:00", "event": "signal_frozen", "task_id": "HumanEval/64", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:33+00:00", "event": "signal_frozen", "task_id": "HumanEval/65", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:33+00:00", "event": "signal_frozen", "task_id": "HumanEval/66", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:33+00:00", "event": "signal_frozen", "task_id": "HumanEval/67", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:33+00:00", "event": "signal_frozen", "task_id": "HumanEval/68", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:33+00:00", "event": "signal_frozen", "task_id": "HumanEval/69", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:33+00:00", "event": "signal_frozen", "task_id": "HumanEval/70", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:33+00:00", "event": "signal_frozen", "task_id": "HumanEval/71", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:33+00:00", "event": "signal_frozen", "task_id": "HumanEval/72", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:33+00:00", "event": "signal_frozen", "task_id": "HumanEval/73", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:33+00:00", "event": "signal_frozen", "task_id": "HumanEval/74", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:33+00:00", "event": "signal_frozen", "task_id": "HumanEval/75", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:33+00:00", "event": "signal_frozen", "task_id": "HumanEval/76", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:33+00:00", "event": "signal_frozen", "task_id": "HumanEval/77", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:33+00:00", "event": "signal_frozen", "task_id": "HumanEval/78", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:33+00:00", "event": "signal_frozen", "task_id": "HumanEval/79", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/80", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/81", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/82", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/83", "execution_status": "fail", "execution_test_status": "fail_assertion", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/84", "execution_status": "fail", "execution_test_status": "fail_assertion", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/85", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/86", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/87", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/88", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/89", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/90", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/91", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/92", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/93", "execution_status": "fail", "execution_test_status": "fail_assertion", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/94", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/95", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/96", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/97", "execution_status": "fail", "execution_test_status": "fail_assertion", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/98", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/99", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/100", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/101", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/102", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/103", "execution_status": "fail", "execution_test_status": "fail_assertion", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/104", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/105", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/106", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/107", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/108", "execution_status": "fail", "execution_test_status": "fail_assertion", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/109", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/110", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:34+00:00", "event": "signal_frozen", "task_id": "HumanEval/111", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/112", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/113", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/114", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/115", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/116", "execution_status": "fail", "execution_test_status": "fail_assertion", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/117", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/118", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/119", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/120", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/121", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/122", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/123", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/124", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/125", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/126", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/127", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/128", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/129", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/130", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/131", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/132", "execution_status": "fail", "execution_test_status": "fail_assertion", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/133", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/134", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/135", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/136", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/137", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/138", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/139", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/140", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/141", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:35+00:00", "event": "signal_frozen", "task_id": "HumanEval/142", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:36+00:00", "event": "signal_frozen", "task_id": "HumanEval/143", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:36+00:00", "event": "signal_frozen", "task_id": "HumanEval/144", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:36+00:00", "event": "signal_frozen", "task_id": "HumanEval/145", "execution_status": "fail", "execution_test_status": "fail_assertion", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:36+00:00", "event": "signal_frozen", "task_id": "HumanEval/146", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:36+00:00", "event": "signal_frozen", "task_id": "HumanEval/147", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:36+00:00", "event": "signal_frozen", "task_id": "HumanEval/148", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:36+00:00", "event": "signal_frozen", "task_id": "HumanEval/149", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:36+00:00", "event": "signal_frozen", "task_id": "HumanEval/150", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:36+00:00", "event": "signal_frozen", "task_id": "HumanEval/151", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:36+00:00", "event": "signal_frozen", "task_id": "HumanEval/152", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:36+00:00", "event": "signal_frozen", "task_id": "HumanEval/153", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:36+00:00", "event": "signal_frozen", "task_id": "HumanEval/154", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:36+00:00", "event": "signal_frozen", "task_id": "HumanEval/155", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:36+00:00", "event": "signal_frozen", "task_id": "HumanEval/156", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:36+00:00", "event": "signal_frozen", "task_id": "HumanEval/157", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:36+00:00", "event": "signal_frozen", "task_id": "HumanEval/158", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:36+00:00", "event": "signal_frozen", "task_id": "HumanEval/159", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:36+00:00", "event": "signal_frozen", "task_id": "HumanEval/160", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:36+00:00", "event": "signal_frozen", "task_id": "HumanEval/161", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:36+00:00", "event": "signal_frozen", "task_id": "HumanEval/162", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:36+00:00", "event": "signal_frozen", "task_id": "HumanEval/163", "execution_status": "pass", "execution_test_status": "pass", "infra_retries": 0}
+{"ts": "2026-09-09T05:31:36+00:00", "event": "arm3_signals_end", "signals": 164, "expected": 164, "complete": true}
+{"ts": "2026-09-09T05:45:49+00:00", "event": "arm3_run_start", "total": 164, "responses": 0, "decisions": 0, "carried_over_spend_usd": 0, "cost_cap_usd": 10.0}
+{"ts": "2026-09-09T05:45:49+00:00", "event": "eval_start", "task_id": "HumanEval/0"}
+{"ts": "2026-09-09T05:45:52+00:00", "event": "response_frozen", "task_id": "HumanEval/0", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0009}
+{"ts": "2026-09-09T05:45:52+00:00", "event": "decision_written", "task_id": "HumanEval/0", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:45:52+00:00", "event": "eval_start", "task_id": "HumanEval/1"}
+{"ts": "2026-09-09T05:45:53+00:00", "event": "response_frozen", "task_id": "HumanEval/1", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.002}
+{"ts": "2026-09-09T05:45:53+00:00", "event": "decision_written", "task_id": "HumanEval/1", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:45:53+00:00", "event": "eval_start", "task_id": "HumanEval/2"}
+{"ts": "2026-09-09T05:45:54+00:00", "event": "response_frozen", "task_id": "HumanEval/2", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0027}
+{"ts": "2026-09-09T05:45:54+00:00", "event": "decision_written", "task_id": "HumanEval/2", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:45:54+00:00", "event": "eval_start", "task_id": "HumanEval/3"}
+{"ts": "2026-09-09T05:45:56+00:00", "event": "response_frozen", "task_id": "HumanEval/3", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0036}
+{"ts": "2026-09-09T05:45:56+00:00", "event": "decision_written", "task_id": "HumanEval/3", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:45:56+00:00", "event": "eval_start", "task_id": "HumanEval/4"}
+{"ts": "2026-09-09T05:45:56+00:00", "event": "response_frozen", "task_id": "HumanEval/4", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0045}
+{"ts": "2026-09-09T05:45:56+00:00", "event": "decision_written", "task_id": "HumanEval/4", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:45:56+00:00", "event": "eval_start", "task_id": "HumanEval/5"}
+{"ts": "2026-09-09T05:45:57+00:00", "event": "response_frozen", "task_id": "HumanEval/5", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0054}
+{"ts": "2026-09-09T05:45:57+00:00", "event": "decision_written", "task_id": "HumanEval/5", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:45:57+00:00", "event": "eval_start", "task_id": "HumanEval/6"}
+{"ts": "2026-09-09T05:45:59+00:00", "event": "response_frozen", "task_id": "HumanEval/6", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0064}
+{"ts": "2026-09-09T05:45:59+00:00", "event": "decision_written", "task_id": "HumanEval/6", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:45:59+00:00", "event": "eval_start", "task_id": "HumanEval/7"}
+{"ts": "2026-09-09T05:46:01+00:00", "event": "response_frozen", "task_id": "HumanEval/7", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0072}
+{"ts": "2026-09-09T05:46:01+00:00", "event": "decision_written", "task_id": "HumanEval/7", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:01+00:00", "event": "eval_start", "task_id": "HumanEval/8"}
+{"ts": "2026-09-09T05:46:02+00:00", "event": "response_frozen", "task_id": "HumanEval/8", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0081}
+{"ts": "2026-09-09T05:46:02+00:00", "event": "decision_written", "task_id": "HumanEval/8", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:02+00:00", "event": "eval_start", "task_id": "HumanEval/9"}
+{"ts": "2026-09-09T05:46:03+00:00", "event": "response_frozen", "task_id": "HumanEval/9", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.009}
+{"ts": "2026-09-09T05:46:03+00:00", "event": "decision_written", "task_id": "HumanEval/9", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:03+00:00", "event": "eval_start", "task_id": "HumanEval/10"}
+{"ts": "2026-09-09T05:46:04+00:00", "event": "response_frozen", "task_id": "HumanEval/10", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0102}
+{"ts": "2026-09-09T05:46:04+00:00", "event": "decision_written", "task_id": "HumanEval/10", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:04+00:00", "event": "eval_start", "task_id": "HumanEval/11"}
+{"ts": "2026-09-09T05:46:05+00:00", "event": "response_frozen", "task_id": "HumanEval/11", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.011}
+{"ts": "2026-09-09T05:46:05+00:00", "event": "decision_written", "task_id": "HumanEval/11", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:05+00:00", "event": "eval_start", "task_id": "HumanEval/12"}
+{"ts": "2026-09-09T05:46:06+00:00", "event": "response_frozen", "task_id": "HumanEval/12", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0119}
+{"ts": "2026-09-09T05:46:06+00:00", "event": "decision_written", "task_id": "HumanEval/12", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:06+00:00", "event": "eval_start", "task_id": "HumanEval/13"}
+{"ts": "2026-09-09T05:46:07+00:00", "event": "response_frozen", "task_id": "HumanEval/13", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0127}
+{"ts": "2026-09-09T05:46:07+00:00", "event": "decision_written", "task_id": "HumanEval/13", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:07+00:00", "event": "eval_start", "task_id": "HumanEval/14"}
+{"ts": "2026-09-09T05:46:07+00:00", "event": "response_frozen", "task_id": "HumanEval/14", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0134}
+{"ts": "2026-09-09T05:46:07+00:00", "event": "decision_written", "task_id": "HumanEval/14", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:07+00:00", "event": "eval_start", "task_id": "HumanEval/15"}
+{"ts": "2026-09-09T05:46:08+00:00", "event": "response_frozen", "task_id": "HumanEval/15", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0141}
+{"ts": "2026-09-09T05:46:08+00:00", "event": "decision_written", "task_id": "HumanEval/15", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:08+00:00", "event": "eval_start", "task_id": "HumanEval/16"}
+{"ts": "2026-09-09T05:46:09+00:00", "event": "response_frozen", "task_id": "HumanEval/16", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0148}
+{"ts": "2026-09-09T05:46:09+00:00", "event": "decision_written", "task_id": "HumanEval/16", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:09+00:00", "event": "eval_start", "task_id": "HumanEval/17"}
+{"ts": "2026-09-09T05:46:10+00:00", "event": "response_frozen", "task_id": "HumanEval/17", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0159}
+{"ts": "2026-09-09T05:46:10+00:00", "event": "decision_written", "task_id": "HumanEval/17", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:10+00:00", "event": "eval_start", "task_id": "HumanEval/18"}
+{"ts": "2026-09-09T05:46:11+00:00", "event": "response_frozen", "task_id": "HumanEval/18", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0168}
+{"ts": "2026-09-09T05:46:11+00:00", "event": "decision_written", "task_id": "HumanEval/18", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:11+00:00", "event": "eval_start", "task_id": "HumanEval/19"}
+{"ts": "2026-09-09T05:46:12+00:00", "event": "response_frozen", "task_id": "HumanEval/19", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0178}
+{"ts": "2026-09-09T05:46:12+00:00", "event": "decision_written", "task_id": "HumanEval/19", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:12+00:00", "event": "eval_start", "task_id": "HumanEval/20"}
+{"ts": "2026-09-09T05:46:12+00:00", "event": "response_frozen", "task_id": "HumanEval/20", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.019}
+{"ts": "2026-09-09T05:46:12+00:00", "event": "decision_written", "task_id": "HumanEval/20", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:12+00:00", "event": "eval_start", "task_id": "HumanEval/21"}
+{"ts": "2026-09-09T05:46:13+00:00", "event": "response_frozen", "task_id": "HumanEval/21", "raw_evaluator_response_sha256": "23794d91c53ae875c8e247d72561e35d9d06ee07c70c9e0dbcc977a6d161504a", "transport_attempts": 1, "spent_usd": 0.02}
+{"ts": "2026-09-09T05:46:13+00:00", "event": "decision_written", "task_id": "HumanEval/21", "verdict": "NO", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:13+00:00", "event": "eval_start", "task_id": "HumanEval/22"}
+{"ts": "2026-09-09T05:46:14+00:00", "event": "response_frozen", "task_id": "HumanEval/22", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0208}
+{"ts": "2026-09-09T05:46:14+00:00", "event": "decision_written", "task_id": "HumanEval/22", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:14+00:00", "event": "eval_start", "task_id": "HumanEval/23"}
+{"ts": "2026-09-09T05:46:15+00:00", "event": "response_frozen", "task_id": "HumanEval/23", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0214}
+{"ts": "2026-09-09T05:46:15+00:00", "event": "decision_written", "task_id": "HumanEval/23", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:15+00:00", "event": "eval_start", "task_id": "HumanEval/24"}
+{"ts": "2026-09-09T05:46:16+00:00", "event": "response_frozen", "task_id": "HumanEval/24", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0222}
+{"ts": "2026-09-09T05:46:16+00:00", "event": "decision_written", "task_id": "HumanEval/24", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:16+00:00", "event": "eval_start", "task_id": "HumanEval/25"}
+{"ts": "2026-09-09T05:46:16+00:00", "event": "response_frozen", "task_id": "HumanEval/25", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0232}
+{"ts": "2026-09-09T05:46:16+00:00", "event": "decision_written", "task_id": "HumanEval/25", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:16+00:00", "event": "eval_start", "task_id": "HumanEval/26"}
+{"ts": "2026-09-09T05:46:17+00:00", "event": "response_frozen", "task_id": "HumanEval/26", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.024}
+{"ts": "2026-09-09T05:46:17+00:00", "event": "decision_written", "task_id": "HumanEval/26", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:17+00:00", "event": "eval_start", "task_id": "HumanEval/27"}
+{"ts": "2026-09-09T05:46:18+00:00", "event": "response_frozen", "task_id": "HumanEval/27", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0247}
+{"ts": "2026-09-09T05:46:18+00:00", "event": "decision_written", "task_id": "HumanEval/27", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:18+00:00", "event": "eval_start", "task_id": "HumanEval/28"}
+{"ts": "2026-09-09T05:46:19+00:00", "event": "response_frozen", "task_id": "HumanEval/28", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0253}
+{"ts": "2026-09-09T05:46:19+00:00", "event": "decision_written", "task_id": "HumanEval/28", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:19+00:00", "event": "eval_start", "task_id": "HumanEval/29"}
+{"ts": "2026-09-09T05:46:20+00:00", "event": "response_frozen", "task_id": "HumanEval/29", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0261}
+{"ts": "2026-09-09T05:46:20+00:00", "event": "decision_written", "task_id": "HumanEval/29", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:20+00:00", "event": "eval_start", "task_id": "HumanEval/30"}
+{"ts": "2026-09-09T05:46:21+00:00", "event": "response_frozen", "task_id": "HumanEval/30", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0269}
+{"ts": "2026-09-09T05:46:21+00:00", "event": "decision_written", "task_id": "HumanEval/30", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:21+00:00", "event": "eval_start", "task_id": "HumanEval/31"}
+{"ts": "2026-09-09T05:46:22+00:00", "event": "response_frozen", "task_id": "HumanEval/31", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0281}
+{"ts": "2026-09-09T05:46:22+00:00", "event": "decision_written", "task_id": "HumanEval/31", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:22+00:00", "event": "eval_start", "task_id": "HumanEval/32"}
+{"ts": "2026-09-09T05:46:23+00:00", "event": "response_frozen", "task_id": "HumanEval/32", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0306}
+{"ts": "2026-09-09T05:46:23+00:00", "event": "decision_written", "task_id": "HumanEval/32", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:23+00:00", "event": "eval_start", "task_id": "HumanEval/33"}
+{"ts": "2026-09-09T05:46:24+00:00", "event": "response_frozen", "task_id": "HumanEval/33", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0316}
+{"ts": "2026-09-09T05:46:24+00:00", "event": "decision_written", "task_id": "HumanEval/33", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:24+00:00", "event": "eval_start", "task_id": "HumanEval/34"}
+{"ts": "2026-09-09T05:46:25+00:00", "event": "response_frozen", "task_id": "HumanEval/34", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0323}
+{"ts": "2026-09-09T05:46:25+00:00", "event": "decision_written", "task_id": "HumanEval/34", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:25+00:00", "event": "eval_start", "task_id": "HumanEval/35"}
+{"ts": "2026-09-09T05:46:26+00:00", "event": "response_frozen", "task_id": "HumanEval/35", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0332}
+{"ts": "2026-09-09T05:46:26+00:00", "event": "decision_written", "task_id": "HumanEval/35", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:26+00:00", "event": "eval_start", "task_id": "HumanEval/36"}
+{"ts": "2026-09-09T05:46:26+00:00", "event": "response_frozen", "task_id": "HumanEval/36", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.034}
+{"ts": "2026-09-09T05:46:26+00:00", "event": "decision_written", "task_id": "HumanEval/36", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:26+00:00", "event": "eval_start", "task_id": "HumanEval/37"}
+{"ts": "2026-09-09T05:46:27+00:00", "event": "response_frozen", "task_id": "HumanEval/37", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0349}
+{"ts": "2026-09-09T05:46:27+00:00", "event": "decision_written", "task_id": "HumanEval/37", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:27+00:00", "event": "eval_start", "task_id": "HumanEval/38"}
+{"ts": "2026-09-09T05:46:28+00:00", "event": "response_frozen", "task_id": "HumanEval/38", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0363}
+{"ts": "2026-09-09T05:46:28+00:00", "event": "decision_written", "task_id": "HumanEval/38", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:28+00:00", "event": "eval_start", "task_id": "HumanEval/39"}
+{"ts": "2026-09-09T05:46:29+00:00", "event": "response_frozen", "task_id": "HumanEval/39", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0374}
+{"ts": "2026-09-09T05:46:29+00:00", "event": "decision_written", "task_id": "HumanEval/39", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:29+00:00", "event": "eval_start", "task_id": "HumanEval/40"}
+{"ts": "2026-09-09T05:46:30+00:00", "event": "response_frozen", "task_id": "HumanEval/40", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0386}
+{"ts": "2026-09-09T05:46:30+00:00", "event": "decision_written", "task_id": "HumanEval/40", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:30+00:00", "event": "eval_start", "task_id": "HumanEval/41"}
+{"ts": "2026-09-09T05:46:31+00:00", "event": "response_frozen", "task_id": "HumanEval/41", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0395}
+{"ts": "2026-09-09T05:46:31+00:00", "event": "decision_written", "task_id": "HumanEval/41", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:31+00:00", "event": "eval_start", "task_id": "HumanEval/42"}
+{"ts": "2026-09-09T05:46:32+00:00", "event": "response_frozen", "task_id": "HumanEval/42", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0403}
+{"ts": "2026-09-09T05:46:32+00:00", "event": "decision_written", "task_id": "HumanEval/42", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:32+00:00", "event": "eval_start", "task_id": "HumanEval/43"}
+{"ts": "2026-09-09T05:46:32+00:00", "event": "response_frozen", "task_id": "HumanEval/43", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0413}
+{"ts": "2026-09-09T05:46:32+00:00", "event": "decision_written", "task_id": "HumanEval/43", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:32+00:00", "event": "eval_start", "task_id": "HumanEval/44"}
+{"ts": "2026-09-09T05:46:33+00:00", "event": "response_frozen", "task_id": "HumanEval/44", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0422}
+{"ts": "2026-09-09T05:46:33+00:00", "event": "decision_written", "task_id": "HumanEval/44", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:33+00:00", "event": "eval_start", "task_id": "HumanEval/45"}
+{"ts": "2026-09-09T05:46:34+00:00", "event": "response_frozen", "task_id": "HumanEval/45", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0428}
+{"ts": "2026-09-09T05:46:34+00:00", "event": "decision_written", "task_id": "HumanEval/45", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:34+00:00", "event": "eval_start", "task_id": "HumanEval/46"}
+{"ts": "2026-09-09T05:46:35+00:00", "event": "response_frozen", "task_id": "HumanEval/46", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.044}
+{"ts": "2026-09-09T05:46:35+00:00", "event": "decision_written", "task_id": "HumanEval/46", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:35+00:00", "event": "eval_start", "task_id": "HumanEval/47"}
+{"ts": "2026-09-09T05:46:36+00:00", "event": "response_frozen", "task_id": "HumanEval/47", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0448}
+{"ts": "2026-09-09T05:46:36+00:00", "event": "decision_written", "task_id": "HumanEval/47", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:36+00:00", "event": "eval_start", "task_id": "HumanEval/48"}
+{"ts": "2026-09-09T05:46:37+00:00", "event": "response_frozen", "task_id": "HumanEval/48", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0455}
+{"ts": "2026-09-09T05:46:37+00:00", "event": "decision_written", "task_id": "HumanEval/48", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:37+00:00", "event": "eval_start", "task_id": "HumanEval/49"}
+{"ts": "2026-09-09T05:46:38+00:00", "event": "response_frozen", "task_id": "HumanEval/49", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0463}
+{"ts": "2026-09-09T05:46:38+00:00", "event": "decision_written", "task_id": "HumanEval/49", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:38+00:00", "event": "eval_start", "task_id": "HumanEval/50"}
+{"ts": "2026-09-09T05:46:38+00:00", "event": "response_frozen", "task_id": "HumanEval/50", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0473}
+{"ts": "2026-09-09T05:46:39+00:00", "event": "decision_written", "task_id": "HumanEval/50", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:39+00:00", "event": "eval_start", "task_id": "HumanEval/51"}
+{"ts": "2026-09-09T05:46:39+00:00", "event": "response_frozen", "task_id": "HumanEval/51", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0481}
+{"ts": "2026-09-09T05:46:39+00:00", "event": "decision_written", "task_id": "HumanEval/51", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:39+00:00", "event": "eval_start", "task_id": "HumanEval/52"}
+{"ts": "2026-09-09T05:46:40+00:00", "event": "response_frozen", "task_id": "HumanEval/52", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0489}
+{"ts": "2026-09-09T05:46:40+00:00", "event": "decision_written", "task_id": "HumanEval/52", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:40+00:00", "event": "eval_start", "task_id": "HumanEval/53"}
+{"ts": "2026-09-09T05:46:41+00:00", "event": "response_frozen", "task_id": "HumanEval/53", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0495}
+{"ts": "2026-09-09T05:46:41+00:00", "event": "decision_written", "task_id": "HumanEval/53", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:41+00:00", "event": "eval_start", "task_id": "HumanEval/54"}
+{"ts": "2026-09-09T05:46:42+00:00", "event": "response_frozen", "task_id": "HumanEval/54", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0504}
+{"ts": "2026-09-09T05:46:42+00:00", "event": "decision_written", "task_id": "HumanEval/54", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:42+00:00", "event": "eval_start", "task_id": "HumanEval/55"}
+{"ts": "2026-09-09T05:46:43+00:00", "event": "response_frozen", "task_id": "HumanEval/55", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0511}
+{"ts": "2026-09-09T05:46:43+00:00", "event": "decision_written", "task_id": "HumanEval/55", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:43+00:00", "event": "eval_start", "task_id": "HumanEval/56"}
+{"ts": "2026-09-09T05:46:44+00:00", "event": "response_frozen", "task_id": "HumanEval/56", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.052}
+{"ts": "2026-09-09T05:46:44+00:00", "event": "decision_written", "task_id": "HumanEval/56", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:44+00:00", "event": "eval_start", "task_id": "HumanEval/57"}
+{"ts": "2026-09-09T05:46:45+00:00", "event": "response_frozen", "task_id": "HumanEval/57", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0529}
+{"ts": "2026-09-09T05:46:45+00:00", "event": "decision_written", "task_id": "HumanEval/57", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:45+00:00", "event": "eval_start", "task_id": "HumanEval/58"}
+{"ts": "2026-09-09T05:46:45+00:00", "event": "response_frozen", "task_id": "HumanEval/58", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0538}
+{"ts": "2026-09-09T05:46:45+00:00", "event": "decision_written", "task_id": "HumanEval/58", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:45+00:00", "event": "eval_start", "task_id": "HumanEval/59"}
+{"ts": "2026-09-09T05:46:46+00:00", "event": "response_frozen", "task_id": "HumanEval/59", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0546}
+{"ts": "2026-09-09T05:46:46+00:00", "event": "decision_written", "task_id": "HumanEval/59", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:46+00:00", "event": "eval_start", "task_id": "HumanEval/60"}
+{"ts": "2026-09-09T05:46:47+00:00", "event": "response_frozen", "task_id": "HumanEval/60", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0554}
+{"ts": "2026-09-09T05:46:47+00:00", "event": "decision_written", "task_id": "HumanEval/60", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:47+00:00", "event": "eval_start", "task_id": "HumanEval/61"}
+{"ts": "2026-09-09T05:46:48+00:00", "event": "response_frozen", "task_id": "HumanEval/61", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0562}
+{"ts": "2026-09-09T05:46:48+00:00", "event": "decision_written", "task_id": "HumanEval/61", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:48+00:00", "event": "eval_start", "task_id": "HumanEval/62"}
+{"ts": "2026-09-09T05:46:49+00:00", "event": "response_frozen", "task_id": "HumanEval/62", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.057}
+{"ts": "2026-09-09T05:46:49+00:00", "event": "decision_written", "task_id": "HumanEval/62", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:49+00:00", "event": "eval_start", "task_id": "HumanEval/63"}
+{"ts": "2026-09-09T05:46:49+00:00", "event": "response_frozen", "task_id": "HumanEval/63", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0581}
+{"ts": "2026-09-09T05:46:49+00:00", "event": "decision_written", "task_id": "HumanEval/63", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:49+00:00", "event": "eval_start", "task_id": "HumanEval/64"}
+{"ts": "2026-09-09T05:46:50+00:00", "event": "response_frozen", "task_id": "HumanEval/64", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.059}
+{"ts": "2026-09-09T05:46:50+00:00", "event": "decision_written", "task_id": "HumanEval/64", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:50+00:00", "event": "eval_start", "task_id": "HumanEval/65"}
+{"ts": "2026-09-09T05:46:51+00:00", "event": "response_frozen", "task_id": "HumanEval/65", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0599}
+{"ts": "2026-09-09T05:46:51+00:00", "event": "decision_written", "task_id": "HumanEval/65", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:51+00:00", "event": "eval_start", "task_id": "HumanEval/66"}
+{"ts": "2026-09-09T05:46:52+00:00", "event": "response_frozen", "task_id": "HumanEval/66", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0607}
+{"ts": "2026-09-09T05:46:52+00:00", "event": "decision_written", "task_id": "HumanEval/66", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:52+00:00", "event": "eval_start", "task_id": "HumanEval/67"}
+{"ts": "2026-09-09T05:46:53+00:00", "event": "response_frozen", "task_id": "HumanEval/67", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0618}
+{"ts": "2026-09-09T05:46:53+00:00", "event": "decision_written", "task_id": "HumanEval/67", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:53+00:00", "event": "eval_start", "task_id": "HumanEval/68"}
+{"ts": "2026-09-09T05:46:54+00:00", "event": "response_frozen", "task_id": "HumanEval/68", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0632}
+{"ts": "2026-09-09T05:46:54+00:00", "event": "decision_written", "task_id": "HumanEval/68", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:54+00:00", "event": "eval_start", "task_id": "HumanEval/69"}
+{"ts": "2026-09-09T05:46:55+00:00", "event": "response_frozen", "task_id": "HumanEval/69", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0642}
+{"ts": "2026-09-09T05:46:55+00:00", "event": "decision_written", "task_id": "HumanEval/69", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:55+00:00", "event": "eval_start", "task_id": "HumanEval/70"}
+{"ts": "2026-09-09T05:46:55+00:00", "event": "response_frozen", "task_id": "HumanEval/70", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0652}
+{"ts": "2026-09-09T05:46:55+00:00", "event": "decision_written", "task_id": "HumanEval/70", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:55+00:00", "event": "eval_start", "task_id": "HumanEval/71"}
+{"ts": "2026-09-09T05:46:56+00:00", "event": "response_frozen", "task_id": "HumanEval/71", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0662}
+{"ts": "2026-09-09T05:46:56+00:00", "event": "decision_written", "task_id": "HumanEval/71", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:56+00:00", "event": "eval_start", "task_id": "HumanEval/72"}
+{"ts": "2026-09-09T05:46:57+00:00", "event": "response_frozen", "task_id": "HumanEval/72", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0673}
+{"ts": "2026-09-09T05:46:57+00:00", "event": "decision_written", "task_id": "HumanEval/72", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:57+00:00", "event": "eval_start", "task_id": "HumanEval/73"}
+{"ts": "2026-09-09T05:46:58+00:00", "event": "response_frozen", "task_id": "HumanEval/73", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0683}
+{"ts": "2026-09-09T05:46:58+00:00", "event": "decision_written", "task_id": "HumanEval/73", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:58+00:00", "event": "eval_start", "task_id": "HumanEval/74"}
+{"ts": "2026-09-09T05:46:58+00:00", "event": "response_frozen", "task_id": "HumanEval/74", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0694}
+{"ts": "2026-09-09T05:46:58+00:00", "event": "decision_written", "task_id": "HumanEval/74", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:46:59+00:00", "event": "eval_start", "task_id": "HumanEval/75"}
+{"ts": "2026-09-09T05:47:03+00:00", "event": "response_frozen", "task_id": "HumanEval/75", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0704}
+{"ts": "2026-09-09T05:47:03+00:00", "event": "decision_written", "task_id": "HumanEval/75", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:03+00:00", "event": "eval_start", "task_id": "HumanEval/76"}
+{"ts": "2026-09-09T05:47:04+00:00", "event": "response_frozen", "task_id": "HumanEval/76", "raw_evaluator_response_sha256": "23794d91c53ae875c8e247d72561e35d9d06ee07c70c9e0dbcc977a6d161504a", "transport_attempts": 1, "spent_usd": 0.0715}
+{"ts": "2026-09-09T05:47:04+00:00", "event": "decision_written", "task_id": "HumanEval/76", "verdict": "NO", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:04+00:00", "event": "eval_start", "task_id": "HumanEval/77"}
+{"ts": "2026-09-09T05:47:05+00:00", "event": "response_frozen", "task_id": "HumanEval/77", "raw_evaluator_response_sha256": "23794d91c53ae875c8e247d72561e35d9d06ee07c70c9e0dbcc977a6d161504a", "transport_attempts": 1, "spent_usd": 0.0724}
+{"ts": "2026-09-09T05:47:05+00:00", "event": "decision_written", "task_id": "HumanEval/77", "verdict": "NO", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:05+00:00", "event": "eval_start", "task_id": "HumanEval/78"}
+{"ts": "2026-09-09T05:47:06+00:00", "event": "response_frozen", "task_id": "HumanEval/78", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0737}
+{"ts": "2026-09-09T05:47:06+00:00", "event": "decision_written", "task_id": "HumanEval/78", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:06+00:00", "event": "eval_start", "task_id": "HumanEval/79"}
+{"ts": "2026-09-09T05:47:07+00:00", "event": "response_frozen", "task_id": "HumanEval/79", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0746}
+{"ts": "2026-09-09T05:47:07+00:00", "event": "decision_written", "task_id": "HumanEval/79", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:07+00:00", "event": "eval_start", "task_id": "HumanEval/80"}
+{"ts": "2026-09-09T05:47:07+00:00", "event": "response_frozen", "task_id": "HumanEval/80", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0755}
+{"ts": "2026-09-09T05:47:07+00:00", "event": "decision_written", "task_id": "HumanEval/80", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:07+00:00", "event": "eval_start", "task_id": "HumanEval/81"}
+{"ts": "2026-09-09T05:47:08+00:00", "event": "response_frozen", "task_id": "HumanEval/81", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0772}
+{"ts": "2026-09-09T05:47:08+00:00", "event": "decision_written", "task_id": "HumanEval/81", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:08+00:00", "event": "eval_start", "task_id": "HumanEval/82"}
+{"ts": "2026-09-09T05:47:09+00:00", "event": "response_frozen", "task_id": "HumanEval/82", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0781}
+{"ts": "2026-09-09T05:47:09+00:00", "event": "decision_written", "task_id": "HumanEval/82", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:09+00:00", "event": "eval_start", "task_id": "HumanEval/83"}
+{"ts": "2026-09-09T05:47:10+00:00", "event": "response_frozen", "task_id": "HumanEval/83", "raw_evaluator_response_sha256": "23794d91c53ae875c8e247d72561e35d9d06ee07c70c9e0dbcc977a6d161504a", "transport_attempts": 1, "spent_usd": 0.0788}
+{"ts": "2026-09-09T05:47:10+00:00", "event": "decision_written", "task_id": "HumanEval/83", "verdict": "NO", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:10+00:00", "event": "eval_start", "task_id": "HumanEval/84"}
+{"ts": "2026-09-09T05:47:11+00:00", "event": "response_frozen", "task_id": "HumanEval/84", "raw_evaluator_response_sha256": "23794d91c53ae875c8e247d72561e35d9d06ee07c70c9e0dbcc977a6d161504a", "transport_attempts": 1, "spent_usd": 0.0797}
+{"ts": "2026-09-09T05:47:11+00:00", "event": "decision_written", "task_id": "HumanEval/84", "verdict": "NO", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:11+00:00", "event": "eval_start", "task_id": "HumanEval/85"}
+{"ts": "2026-09-09T05:47:11+00:00", "event": "response_frozen", "task_id": "HumanEval/85", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0804}
+{"ts": "2026-09-09T05:47:11+00:00", "event": "decision_written", "task_id": "HumanEval/85", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:11+00:00", "event": "eval_start", "task_id": "HumanEval/86"}
+{"ts": "2026-09-09T05:47:13+00:00", "event": "response_frozen", "task_id": "HumanEval/86", "raw_evaluator_response_sha256": "23794d91c53ae875c8e247d72561e35d9d06ee07c70c9e0dbcc977a6d161504a", "transport_attempts": 1, "spent_usd": 0.0813}
+{"ts": "2026-09-09T05:47:13+00:00", "event": "decision_written", "task_id": "HumanEval/86", "verdict": "NO", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:13+00:00", "event": "eval_start", "task_id": "HumanEval/87"}
+{"ts": "2026-09-09T05:47:13+00:00", "event": "response_frozen", "task_id": "HumanEval/87", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0826}
+{"ts": "2026-09-09T05:47:13+00:00", "event": "decision_written", "task_id": "HumanEval/87", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:13+00:00", "event": "eval_start", "task_id": "HumanEval/88"}
+{"ts": "2026-09-09T05:47:14+00:00", "event": "response_frozen", "task_id": "HumanEval/88", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0837}
+{"ts": "2026-09-09T05:47:14+00:00", "event": "decision_written", "task_id": "HumanEval/88", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:14+00:00", "event": "eval_start", "task_id": "HumanEval/89"}
+{"ts": "2026-09-09T05:47:15+00:00", "event": "response_frozen", "task_id": "HumanEval/89", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0847}
+{"ts": "2026-09-09T05:47:15+00:00", "event": "decision_written", "task_id": "HumanEval/89", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:15+00:00", "event": "eval_start", "task_id": "HumanEval/90"}
+{"ts": "2026-09-09T05:47:16+00:00", "event": "response_frozen", "task_id": "HumanEval/90", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0855}
+{"ts": "2026-09-09T05:47:16+00:00", "event": "decision_written", "task_id": "HumanEval/90", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:16+00:00", "event": "eval_start", "task_id": "HumanEval/91"}
+{"ts": "2026-09-09T05:47:17+00:00", "event": "response_frozen", "task_id": "HumanEval/91", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0864}
+{"ts": "2026-09-09T05:47:17+00:00", "event": "decision_written", "task_id": "HumanEval/91", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:17+00:00", "event": "eval_start", "task_id": "HumanEval/92"}
+{"ts": "2026-09-09T05:47:18+00:00", "event": "response_frozen", "task_id": "HumanEval/92", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0874}
+{"ts": "2026-09-09T05:47:18+00:00", "event": "decision_written", "task_id": "HumanEval/92", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:18+00:00", "event": "eval_start", "task_id": "HumanEval/93"}
+{"ts": "2026-09-09T05:47:19+00:00", "event": "response_frozen", "task_id": "HumanEval/93", "raw_evaluator_response_sha256": "23794d91c53ae875c8e247d72561e35d9d06ee07c70c9e0dbcc977a6d161504a", "transport_attempts": 1, "spent_usd": 0.0884}
+{"ts": "2026-09-09T05:47:19+00:00", "event": "decision_written", "task_id": "HumanEval/93", "verdict": "NO", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:19+00:00", "event": "eval_start", "task_id": "HumanEval/94"}
+{"ts": "2026-09-09T05:47:20+00:00", "event": "response_frozen", "task_id": "HumanEval/94", "raw_evaluator_response_sha256": "23794d91c53ae875c8e247d72561e35d9d06ee07c70c9e0dbcc977a6d161504a", "transport_attempts": 1, "spent_usd": 0.0899}
+{"ts": "2026-09-09T05:47:20+00:00", "event": "decision_written", "task_id": "HumanEval/94", "verdict": "NO", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:20+00:00", "event": "eval_start", "task_id": "HumanEval/95"}
+{"ts": "2026-09-09T05:47:20+00:00", "event": "response_frozen", "task_id": "HumanEval/95", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.091}
+{"ts": "2026-09-09T05:47:20+00:00", "event": "decision_written", "task_id": "HumanEval/95", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:20+00:00", "event": "eval_start", "task_id": "HumanEval/96"}
+{"ts": "2026-09-09T05:47:21+00:00", "event": "response_frozen", "task_id": "HumanEval/96", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0921}
+{"ts": "2026-09-09T05:47:21+00:00", "event": "decision_written", "task_id": "HumanEval/96", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:21+00:00", "event": "eval_start", "task_id": "HumanEval/97"}
+{"ts": "2026-09-09T05:47:22+00:00", "event": "response_frozen", "task_id": "HumanEval/97", "raw_evaluator_response_sha256": "23794d91c53ae875c8e247d72561e35d9d06ee07c70c9e0dbcc977a6d161504a", "transport_attempts": 1, "spent_usd": 0.0929}
+{"ts": "2026-09-09T05:47:22+00:00", "event": "decision_written", "task_id": "HumanEval/97", "verdict": "NO", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:22+00:00", "event": "eval_start", "task_id": "HumanEval/98"}
+{"ts": "2026-09-09T05:47:23+00:00", "event": "response_frozen", "task_id": "HumanEval/98", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0937}
+{"ts": "2026-09-09T05:47:23+00:00", "event": "decision_written", "task_id": "HumanEval/98", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:23+00:00", "event": "eval_start", "task_id": "HumanEval/99"}
+{"ts": "2026-09-09T05:47:24+00:00", "event": "response_frozen", "task_id": "HumanEval/99", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0948}
+{"ts": "2026-09-09T05:47:24+00:00", "event": "decision_written", "task_id": "HumanEval/99", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:24+00:00", "event": "eval_start", "task_id": "HumanEval/100"}
+{"ts": "2026-09-09T05:47:24+00:00", "event": "response_frozen", "task_id": "HumanEval/100", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0957}
+{"ts": "2026-09-09T05:47:24+00:00", "event": "decision_written", "task_id": "HumanEval/100", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:24+00:00", "event": "eval_start", "task_id": "HumanEval/101"}
+{"ts": "2026-09-09T05:47:25+00:00", "event": "response_frozen", "task_id": "HumanEval/101", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0965}
+{"ts": "2026-09-09T05:47:25+00:00", "event": "decision_written", "task_id": "HumanEval/101", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:25+00:00", "event": "eval_start", "task_id": "HumanEval/102"}
+{"ts": "2026-09-09T05:47:26+00:00", "event": "response_frozen", "task_id": "HumanEval/102", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0973}
+{"ts": "2026-09-09T05:47:26+00:00", "event": "decision_written", "task_id": "HumanEval/102", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:26+00:00", "event": "eval_start", "task_id": "HumanEval/103"}
+{"ts": "2026-09-09T05:47:27+00:00", "event": "response_frozen", "task_id": "HumanEval/103", "raw_evaluator_response_sha256": "23794d91c53ae875c8e247d72561e35d9d06ee07c70c9e0dbcc977a6d161504a", "transport_attempts": 1, "spent_usd": 0.0983}
+{"ts": "2026-09-09T05:47:27+00:00", "event": "decision_written", "task_id": "HumanEval/103", "verdict": "NO", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:27+00:00", "event": "eval_start", "task_id": "HumanEval/104"}
+{"ts": "2026-09-09T05:47:28+00:00", "event": "response_frozen", "task_id": "HumanEval/104", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.0992}
+{"ts": "2026-09-09T05:47:28+00:00", "event": "decision_written", "task_id": "HumanEval/104", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:28+00:00", "event": "eval_start", "task_id": "HumanEval/105"}
+{"ts": "2026-09-09T05:47:28+00:00", "event": "response_frozen", "task_id": "HumanEval/105", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1006}
+{"ts": "2026-09-09T05:47:28+00:00", "event": "decision_written", "task_id": "HumanEval/105", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:28+00:00", "event": "eval_start", "task_id": "HumanEval/106"}
+{"ts": "2026-09-09T05:47:29+00:00", "event": "response_frozen", "task_id": "HumanEval/106", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1016}
+{"ts": "2026-09-09T05:47:29+00:00", "event": "decision_written", "task_id": "HumanEval/106", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:29+00:00", "event": "eval_start", "task_id": "HumanEval/107"}
+{"ts": "2026-09-09T05:47:30+00:00", "event": "response_frozen", "task_id": "HumanEval/107", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1028}
+{"ts": "2026-09-09T05:47:30+00:00", "event": "decision_written", "task_id": "HumanEval/107", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:30+00:00", "event": "eval_start", "task_id": "HumanEval/108"}
+{"ts": "2026-09-09T05:47:31+00:00", "event": "response_frozen", "task_id": "HumanEval/108", "raw_evaluator_response_sha256": "23794d91c53ae875c8e247d72561e35d9d06ee07c70c9e0dbcc977a6d161504a", "transport_attempts": 1, "spent_usd": 0.1039}
+{"ts": "2026-09-09T05:47:31+00:00", "event": "decision_written", "task_id": "HumanEval/108", "verdict": "NO", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:31+00:00", "event": "eval_start", "task_id": "HumanEval/109"}
+{"ts": "2026-09-09T05:47:32+00:00", "event": "response_frozen", "task_id": "HumanEval/109", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1053}
+{"ts": "2026-09-09T05:47:32+00:00", "event": "decision_written", "task_id": "HumanEval/109", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:32+00:00", "event": "eval_start", "task_id": "HumanEval/110"}
+{"ts": "2026-09-09T05:47:33+00:00", "event": "response_frozen", "task_id": "HumanEval/110", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1065}
+{"ts": "2026-09-09T05:47:33+00:00", "event": "decision_written", "task_id": "HumanEval/110", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:33+00:00", "event": "eval_start", "task_id": "HumanEval/111"}
+{"ts": "2026-09-09T05:47:34+00:00", "event": "response_frozen", "task_id": "HumanEval/111", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1075}
+{"ts": "2026-09-09T05:47:34+00:00", "event": "decision_written", "task_id": "HumanEval/111", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:34+00:00", "event": "eval_start", "task_id": "HumanEval/112"}
+{"ts": "2026-09-09T05:47:35+00:00", "event": "response_frozen", "task_id": "HumanEval/112", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1085}
+{"ts": "2026-09-09T05:47:35+00:00", "event": "decision_written", "task_id": "HumanEval/112", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:35+00:00", "event": "eval_start", "task_id": "HumanEval/113"}
+{"ts": "2026-09-09T05:47:36+00:00", "event": "response_frozen", "task_id": "HumanEval/113", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1096}
+{"ts": "2026-09-09T05:47:36+00:00", "event": "decision_written", "task_id": "HumanEval/113", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:36+00:00", "event": "eval_start", "task_id": "HumanEval/114"}
+{"ts": "2026-09-09T05:47:36+00:00", "event": "response_frozen", "task_id": "HumanEval/114", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1105}
+{"ts": "2026-09-09T05:47:36+00:00", "event": "decision_written", "task_id": "HumanEval/114", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:36+00:00", "event": "eval_start", "task_id": "HumanEval/115"}
+{"ts": "2026-09-09T05:47:37+00:00", "event": "response_frozen", "task_id": "HumanEval/115", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1118}
+{"ts": "2026-09-09T05:47:37+00:00", "event": "decision_written", "task_id": "HumanEval/115", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:37+00:00", "event": "eval_start", "task_id": "HumanEval/116"}
+{"ts": "2026-09-09T05:47:38+00:00", "event": "response_frozen", "task_id": "HumanEval/116", "raw_evaluator_response_sha256": "23794d91c53ae875c8e247d72561e35d9d06ee07c70c9e0dbcc977a6d161504a", "transport_attempts": 1, "spent_usd": 0.1128}
+{"ts": "2026-09-09T05:47:38+00:00", "event": "decision_written", "task_id": "HumanEval/116", "verdict": "NO", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:38+00:00", "event": "eval_start", "task_id": "HumanEval/117"}
+{"ts": "2026-09-09T05:47:39+00:00", "event": "response_frozen", "task_id": "HumanEval/117", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1139}
+{"ts": "2026-09-09T05:47:39+00:00", "event": "decision_written", "task_id": "HumanEval/117", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:39+00:00", "event": "eval_start", "task_id": "HumanEval/118"}
+{"ts": "2026-09-09T05:47:40+00:00", "event": "response_frozen", "task_id": "HumanEval/118", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.115}
+{"ts": "2026-09-09T05:47:40+00:00", "event": "decision_written", "task_id": "HumanEval/118", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:40+00:00", "event": "eval_start", "task_id": "HumanEval/119"}
+{"ts": "2026-09-09T05:47:41+00:00", "event": "response_frozen", "task_id": "HumanEval/119", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1161}
+{"ts": "2026-09-09T05:47:42+00:00", "event": "decision_written", "task_id": "HumanEval/119", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:42+00:00", "event": "eval_start", "task_id": "HumanEval/120"}
+{"ts": "2026-09-09T05:47:42+00:00", "event": "response_frozen", "task_id": "HumanEval/120", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1172}
+{"ts": "2026-09-09T05:47:42+00:00", "event": "decision_written", "task_id": "HumanEval/120", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:42+00:00", "event": "eval_start", "task_id": "HumanEval/121"}
+{"ts": "2026-09-09T05:47:43+00:00", "event": "response_frozen", "task_id": "HumanEval/121", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.118}
+{"ts": "2026-09-09T05:47:43+00:00", "event": "decision_written", "task_id": "HumanEval/121", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:43+00:00", "event": "eval_start", "task_id": "HumanEval/122"}
+{"ts": "2026-09-09T05:47:44+00:00", "event": "response_frozen", "task_id": "HumanEval/122", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1188}
+{"ts": "2026-09-09T05:47:44+00:00", "event": "decision_written", "task_id": "HumanEval/122", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:44+00:00", "event": "eval_start", "task_id": "HumanEval/123"}
+{"ts": "2026-09-09T05:47:45+00:00", "event": "response_frozen", "task_id": "HumanEval/123", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1201}
+{"ts": "2026-09-09T05:47:45+00:00", "event": "decision_written", "task_id": "HumanEval/123", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:45+00:00", "event": "eval_start", "task_id": "HumanEval/124"}
+{"ts": "2026-09-09T05:47:45+00:00", "event": "response_frozen", "task_id": "HumanEval/124", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1217}
+{"ts": "2026-09-09T05:47:45+00:00", "event": "decision_written", "task_id": "HumanEval/124", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:45+00:00", "event": "eval_start", "task_id": "HumanEval/125"}
+{"ts": "2026-09-09T05:47:46+00:00", "event": "response_frozen", "task_id": "HumanEval/125", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1227}
+{"ts": "2026-09-09T05:47:46+00:00", "event": "decision_written", "task_id": "HumanEval/125", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:46+00:00", "event": "eval_start", "task_id": "HumanEval/126"}
+{"ts": "2026-09-09T05:47:47+00:00", "event": "response_frozen", "task_id": "HumanEval/126", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1239}
+{"ts": "2026-09-09T05:47:47+00:00", "event": "decision_written", "task_id": "HumanEval/126", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:47+00:00", "event": "eval_start", "task_id": "HumanEval/127"}
+{"ts": "2026-09-09T05:47:48+00:00", "event": "response_frozen", "task_id": "HumanEval/127", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1253}
+{"ts": "2026-09-09T05:47:48+00:00", "event": "decision_written", "task_id": "HumanEval/127", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:48+00:00", "event": "eval_start", "task_id": "HumanEval/128"}
+{"ts": "2026-09-09T05:47:49+00:00", "event": "response_frozen", "task_id": "HumanEval/128", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1263}
+{"ts": "2026-09-09T05:47:49+00:00", "event": "decision_written", "task_id": "HumanEval/128", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:49+00:00", "event": "eval_start", "task_id": "HumanEval/129"}
+{"ts": "2026-09-09T05:47:49+00:00", "event": "response_frozen", "task_id": "HumanEval/129", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1286}
+{"ts": "2026-09-09T05:47:49+00:00", "event": "decision_written", "task_id": "HumanEval/129", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:49+00:00", "event": "eval_start", "task_id": "HumanEval/130"}
+{"ts": "2026-09-09T05:47:50+00:00", "event": "response_frozen", "task_id": "HumanEval/130", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1299}
+{"ts": "2026-09-09T05:47:50+00:00", "event": "decision_written", "task_id": "HumanEval/130", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:50+00:00", "event": "eval_start", "task_id": "HumanEval/131"}
+{"ts": "2026-09-09T05:47:51+00:00", "event": "response_frozen", "task_id": "HumanEval/131", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1307}
+{"ts": "2026-09-09T05:47:51+00:00", "event": "decision_written", "task_id": "HumanEval/131", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:51+00:00", "event": "eval_start", "task_id": "HumanEval/132"}
+{"ts": "2026-09-09T05:47:52+00:00", "event": "response_frozen", "task_id": "HumanEval/132", "raw_evaluator_response_sha256": "23794d91c53ae875c8e247d72561e35d9d06ee07c70c9e0dbcc977a6d161504a", "transport_attempts": 1, "spent_usd": 0.1317}
+{"ts": "2026-09-09T05:47:52+00:00", "event": "decision_written", "task_id": "HumanEval/132", "verdict": "NO", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:52+00:00", "event": "eval_start", "task_id": "HumanEval/133"}
+{"ts": "2026-09-09T05:47:53+00:00", "event": "response_frozen", "task_id": "HumanEval/133", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1326}
+{"ts": "2026-09-09T05:47:53+00:00", "event": "decision_written", "task_id": "HumanEval/133", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:53+00:00", "event": "eval_start", "task_id": "HumanEval/134"}
+{"ts": "2026-09-09T05:47:54+00:00", "event": "response_frozen", "task_id": "HumanEval/134", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1336}
+{"ts": "2026-09-09T05:47:54+00:00", "event": "decision_written", "task_id": "HumanEval/134", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:54+00:00", "event": "eval_start", "task_id": "HumanEval/135"}
+{"ts": "2026-09-09T05:47:55+00:00", "event": "response_frozen", "task_id": "HumanEval/135", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1345}
+{"ts": "2026-09-09T05:47:55+00:00", "event": "decision_written", "task_id": "HumanEval/135", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:55+00:00", "event": "eval_start", "task_id": "HumanEval/136"}
+{"ts": "2026-09-09T05:47:55+00:00", "event": "response_frozen", "task_id": "HumanEval/136", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1355}
+{"ts": "2026-09-09T05:47:55+00:00", "event": "decision_written", "task_id": "HumanEval/136", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:55+00:00", "event": "eval_start", "task_id": "HumanEval/137"}
+{"ts": "2026-09-09T05:47:56+00:00", "event": "response_frozen", "task_id": "HumanEval/137", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1365}
+{"ts": "2026-09-09T05:47:56+00:00", "event": "decision_written", "task_id": "HumanEval/137", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:56+00:00", "event": "eval_start", "task_id": "HumanEval/138"}
+{"ts": "2026-09-09T05:47:57+00:00", "event": "response_frozen", "task_id": "HumanEval/138", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1372}
+{"ts": "2026-09-09T05:47:57+00:00", "event": "decision_written", "task_id": "HumanEval/138", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:57+00:00", "event": "eval_start", "task_id": "HumanEval/139"}
+{"ts": "2026-09-09T05:47:58+00:00", "event": "response_frozen", "task_id": "HumanEval/139", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1381}
+{"ts": "2026-09-09T05:47:58+00:00", "event": "decision_written", "task_id": "HumanEval/139", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:58+00:00", "event": "eval_start", "task_id": "HumanEval/140"}
+{"ts": "2026-09-09T05:47:59+00:00", "event": "response_frozen", "task_id": "HumanEval/140", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1391}
+{"ts": "2026-09-09T05:47:59+00:00", "event": "decision_written", "task_id": "HumanEval/140", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:47:59+00:00", "event": "eval_start", "task_id": "HumanEval/141"}
+{"ts": "2026-09-09T05:48:01+00:00", "event": "response_frozen", "task_id": "HumanEval/141", "raw_evaluator_response_sha256": "23794d91c53ae875c8e247d72561e35d9d06ee07c70c9e0dbcc977a6d161504a", "transport_attempts": 1, "spent_usd": 0.1404}
+{"ts": "2026-09-09T05:48:01+00:00", "event": "decision_written", "task_id": "HumanEval/141", "verdict": "NO", "parse_status": "valid"}
+{"ts": "2026-09-09T05:48:01+00:00", "event": "eval_start", "task_id": "HumanEval/142"}
+{"ts": "2026-09-09T05:48:01+00:00", "event": "response_frozen", "task_id": "HumanEval/142", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1415}
+{"ts": "2026-09-09T05:48:01+00:00", "event": "decision_written", "task_id": "HumanEval/142", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:48:01+00:00", "event": "eval_start", "task_id": "HumanEval/143"}
+{"ts": "2026-09-09T05:48:02+00:00", "event": "response_frozen", "task_id": "HumanEval/143", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1426}
+{"ts": "2026-09-09T05:48:02+00:00", "event": "decision_written", "task_id": "HumanEval/143", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:48:02+00:00", "event": "eval_start", "task_id": "HumanEval/144"}
+{"ts": "2026-09-09T05:48:03+00:00", "event": "response_frozen", "task_id": "HumanEval/144", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1436}
+{"ts": "2026-09-09T05:48:03+00:00", "event": "decision_written", "task_id": "HumanEval/144", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:48:03+00:00", "event": "eval_start", "task_id": "HumanEval/145"}
+{"ts": "2026-09-09T05:48:04+00:00", "event": "response_frozen", "task_id": "HumanEval/145", "raw_evaluator_response_sha256": "23794d91c53ae875c8e247d72561e35d9d06ee07c70c9e0dbcc977a6d161504a", "transport_attempts": 1, "spent_usd": 0.1445}
+{"ts": "2026-09-09T05:48:04+00:00", "event": "decision_written", "task_id": "HumanEval/145", "verdict": "NO", "parse_status": "valid"}
+{"ts": "2026-09-09T05:48:04+00:00", "event": "eval_start", "task_id": "HumanEval/146"}
+{"ts": "2026-09-09T05:48:05+00:00", "event": "response_frozen", "task_id": "HumanEval/146", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1454}
+{"ts": "2026-09-09T05:48:05+00:00", "event": "decision_written", "task_id": "HumanEval/146", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:48:05+00:00", "event": "eval_start", "task_id": "HumanEval/147"}
+{"ts": "2026-09-09T05:48:06+00:00", "event": "response_frozen", "task_id": "HumanEval/147", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1467}
+{"ts": "2026-09-09T05:48:06+00:00", "event": "decision_written", "task_id": "HumanEval/147", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:48:06+00:00", "event": "eval_start", "task_id": "HumanEval/148"}
+{"ts": "2026-09-09T05:48:07+00:00", "event": "response_frozen", "task_id": "HumanEval/148", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.148}
+{"ts": "2026-09-09T05:48:07+00:00", "event": "decision_written", "task_id": "HumanEval/148", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:48:07+00:00", "event": "eval_start", "task_id": "HumanEval/149"}
+{"ts": "2026-09-09T05:48:08+00:00", "event": "response_frozen", "task_id": "HumanEval/149", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.149}
+{"ts": "2026-09-09T05:48:08+00:00", "event": "decision_written", "task_id": "HumanEval/149", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:48:08+00:00", "event": "eval_start", "task_id": "HumanEval/150"}
+{"ts": "2026-09-09T05:48:08+00:00", "event": "response_frozen", "task_id": "HumanEval/150", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1499}
+{"ts": "2026-09-09T05:48:09+00:00", "event": "decision_written", "task_id": "HumanEval/150", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:48:09+00:00", "event": "eval_start", "task_id": "HumanEval/151"}
+{"ts": "2026-09-09T05:48:09+00:00", "event": "response_frozen", "task_id": "HumanEval/151", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1508}
+{"ts": "2026-09-09T05:48:09+00:00", "event": "decision_written", "task_id": "HumanEval/151", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:48:09+00:00", "event": "eval_start", "task_id": "HumanEval/152"}
+{"ts": "2026-09-09T05:48:10+00:00", "event": "response_frozen", "task_id": "HumanEval/152", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1519}
+{"ts": "2026-09-09T05:48:10+00:00", "event": "decision_written", "task_id": "HumanEval/152", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:48:10+00:00", "event": "eval_start", "task_id": "HumanEval/153"}
+{"ts": "2026-09-09T05:48:11+00:00", "event": "response_frozen", "task_id": "HumanEval/153", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1534}
+{"ts": "2026-09-09T05:48:11+00:00", "event": "decision_written", "task_id": "HumanEval/153", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:48:11+00:00", "event": "eval_start", "task_id": "HumanEval/154"}
+{"ts": "2026-09-09T05:48:12+00:00", "event": "response_frozen", "task_id": "HumanEval/154", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1543}
+{"ts": "2026-09-09T05:48:12+00:00", "event": "decision_written", "task_id": "HumanEval/154", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:48:12+00:00", "event": "eval_start", "task_id": "HumanEval/155"}
+{"ts": "2026-09-09T05:48:15+00:00", "event": "response_frozen", "task_id": "HumanEval/155", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1552}
+{"ts": "2026-09-09T05:48:15+00:00", "event": "decision_written", "task_id": "HumanEval/155", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:48:15+00:00", "event": "eval_start", "task_id": "HumanEval/156"}
+{"ts": "2026-09-09T05:48:15+00:00", "event": "response_frozen", "task_id": "HumanEval/156", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1563}
+{"ts": "2026-09-09T05:48:15+00:00", "event": "decision_written", "task_id": "HumanEval/156", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:48:15+00:00", "event": "eval_start", "task_id": "HumanEval/157"}
+{"ts": "2026-09-09T05:48:16+00:00", "event": "response_frozen", "task_id": "HumanEval/157", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1572}
+{"ts": "2026-09-09T05:48:16+00:00", "event": "decision_written", "task_id": "HumanEval/157", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:48:16+00:00", "event": "eval_start", "task_id": "HumanEval/158"}
+{"ts": "2026-09-09T05:48:17+00:00", "event": "response_frozen", "task_id": "HumanEval/158", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.158}
+{"ts": "2026-09-09T05:48:17+00:00", "event": "decision_written", "task_id": "HumanEval/158", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:48:17+00:00", "event": "eval_start", "task_id": "HumanEval/159"}
+{"ts": "2026-09-09T05:48:19+00:00", "event": "response_frozen", "task_id": "HumanEval/159", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1592}
+{"ts": "2026-09-09T05:48:19+00:00", "event": "decision_written", "task_id": "HumanEval/159", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:48:19+00:00", "event": "eval_start", "task_id": "HumanEval/160"}
+{"ts": "2026-09-09T05:48:20+00:00", "event": "response_frozen", "task_id": "HumanEval/160", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1604}
+{"ts": "2026-09-09T05:48:20+00:00", "event": "decision_written", "task_id": "HumanEval/160", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:48:20+00:00", "event": "eval_start", "task_id": "HumanEval/161"}
+{"ts": "2026-09-09T05:48:21+00:00", "event": "response_frozen", "task_id": "HumanEval/161", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1612}
+{"ts": "2026-09-09T05:48:21+00:00", "event": "decision_written", "task_id": "HumanEval/161", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:48:21+00:00", "event": "eval_start", "task_id": "HumanEval/162"}
+{"ts": "2026-09-09T05:48:22+00:00", "event": "response_frozen", "task_id": "HumanEval/162", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.1621}
+{"ts": "2026-09-09T05:48:22+00:00", "event": "decision_written", "task_id": "HumanEval/162", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:48:22+00:00", "event": "eval_start", "task_id": "HumanEval/163"}
+{"ts": "2026-09-09T05:48:23+00:00", "event": "response_frozen", "task_id": "HumanEval/163", "raw_evaluator_response_sha256": "f9171164593756e56fb197327b529a4955590566560dbe62d586bff41be9d297", "transport_attempts": 1, "spent_usd": 0.163}
+{"ts": "2026-09-09T05:48:23+00:00", "event": "decision_written", "task_id": "HumanEval/163", "verdict": "YES", "parse_status": "valid"}
+{"ts": "2026-09-09T05:48:23+00:00", "event": "arm3_run_end", "responses": 164, "decisions": 164, "expected": 164, "spent_usd": 0.163, "complete": true}
