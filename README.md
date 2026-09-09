@@ -141,4 +141,13 @@ and replication, NOT needed for reproduction of the reported results.
 
 ## License
 
-LICENSE NOT SPECIFIED.
+This work is licensed under the **Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International License**
+(CC BY-NC-SA 4.0). See [`LICENSE`](LICENSE).
+
+- **Attribution required** — you must give appropriate credit.
+- **Non-commercial use only** — commercial use is not permitted.
+- **Share-alike** — derivatives must be distributed under the same
+  license.
+
+https://creativecommons.org/licenses/by-nc-sa/4.0/
