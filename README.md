@@ -4,6 +4,25 @@
 artifact for a finished experiment. Nothing here needs to be regenerated
 to audit the reported results.
 
+## Related repositories
+
+This benchmark is one of two preserved audit artifacts supporting the
+paper *"Limits of Self-Correction in LLMs: An Information-Theoretic
+Analysis of Correlated Errors"*. The companion repository
+[`selfcorr-bench`](https://github.com/AndBrilliant/selfcorr-bench)
+contains the **cross-model MBPP measurement**: the full 947-task MBPP
+corpus evaluated under the selfcheck and steelman arms across six model
+families (DeepSeek, GLM, Qwen, GPT-5.4, GPT-6-Luna, Athena Flash-Next),
+together with its own harness, raw evaluator outputs, and analysis
+scripts that reproduce every number in the paper's cross-model table.
+
+Where this repository answers *"can one frozen candidate be recognized
+across evaluator configurations?"* (paired design, N=164, three arms),
+`selfcorr-bench` answers *"does the blind spot replicate across model
+families on a second benchmark?"* (own-generation design, N=947 per
+family, two arms). They are independent datasets; neither can be
+recovered from the other.
+
 ## What this benchmark is
 
 The benchmark evaluates whether different evaluator configurations
