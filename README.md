@@ -1,3 +1,13 @@
+# ⚠️ SUPERSEDED
+
+**This repository has been superseded.** The consolidated benchmark repository for the paper *"Limits of Self-Correction in LLMs: An Information-Theoretic Analysis of Correlated Errors"* is now:
+
+**→ https://github.com/AndBrilliant/llm-selfcorr-benchmarks**
+
+It contains both benchmarks (the HumanEval paired experiment and the MBPP cross-model measurement), all data, and the analysis scripts. This repo is kept for historical reference only; the paper cites the consolidated repo.
+
+---
+
 # HumanEval Self-Correction Benchmark (benchmark_v2)
 
 **Status: COMPLETE.** This repository is the preserved reproducibility
